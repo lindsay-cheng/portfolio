@@ -170,7 +170,7 @@ html {
 
 .about-image {
   flex: 1;
-  max-width: 50%;
+  max-width: 35%;
   border-radius: 20px;
   overflow: hidden;
 }
