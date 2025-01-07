@@ -161,30 +161,37 @@ html {
 
 /* About Section */
 .about {
-  display: flex;
-  gap: 4rem;
-  align-items: center;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0;
+  display: flex;
+  gap: 4rem;
+  align-items: stretch;
 }
 
 .about-image {
   flex: 1;
-  max-width: 35%;
+  max-width: 30%;
   border-radius: 20px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
 .about-image img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   display: block;
+  max-height: flex;
 }
 
 .about-content {
   flex: 1;
-  max-width: 50%;
+  max-width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .about-content h2 {
@@ -201,11 +208,12 @@ html {
 
 /* Education Section */
 .education-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
   display: flex;
   gap: 4rem;
   align-items: flex-start;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .education-content {
@@ -270,7 +278,7 @@ html {
 /* Tech Stack Section */
 .tech-stack {
   background: linear-gradient(45deg, #f5f5f7, #fff);
-  padding: 6rem 2rem;
+  padding: 4rem 2rem;
   text-align: center;
   position: relative;
   z-index: 2;
@@ -280,6 +288,7 @@ html {
 .skills-container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0;
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -383,8 +392,9 @@ html {
 
 /* Experience Section */
 .experience-timeline {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0;
 }
 
 .experience-item {
@@ -427,9 +437,9 @@ html {
 
 /* Projects Section */
 .projects {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0;
   columns: 2;
   column-gap: 2rem;
 }
@@ -557,9 +567,7 @@ html {
 .footer-content {
   max-width: 1200px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  padding: 0;
 }
 
 .footer-left {
@@ -641,124 +649,50 @@ html {
   filter: invert(1);
 }
 
-/* Responsive adjustments */
+/* Standard Breakpoints:
+xs: 0-576px (Default styles)
+sm: 576px-768px
+md: 768px-992px
+lg: 992px-1200px
+xl: 1200px+ */
+
+/* XL Screens (1200px+) */
 @media (max-width: 1200px) {
-  .about {
-    padding: 0 2rem;
-    gap: 3rem;
+  .section,
+  .tech-stack {
+    padding: 4rem 2rem;
   }
-}
-
-@media (max-width: 992px) {
-  .about {
-    flex-direction: column;
-    text-align: center;
-    gap: 2rem;
-  }
-
-  .about-content {
-    max-width: 600px;
-    width: 100%;
-  }
-}
-
-/* Responsive Footer */
-@media (max-width: 768px) {
+  
+  .about,
+  .education-container,
+  .experience-timeline,
+  .projects,
+  .skills-container,
   .footer-content {
-      flex-direction: column;
-      gap: 2rem;
-  }
-
-  .footer-right {
-      text-align: left;
-      width: 100%;
-  }
-
-  .contact-info {
-      align-items: flex-start;
-  }
-
-  .social-links {
-      justify-content: flex-start;
+    padding: 0;
   }
 }
 
-/* Mobile Menu Styles */
+/* MD Screens (768px-992px) */
+@media (max-width: 992px) {
+  .section,
+  .tech-stack {
+    padding: 3rem 1.5rem;
+  }
+}
+
+/* SM Screens (576px-768px) */
 @media (max-width: 768px) {
-  .nav-hamburger-container {
-      display: block;
+  .section,
+  .tech-stack {
+    padding: 2.5rem 1rem;
   }
+}
 
-  .hamburger {
-      display: flex;
-  }
-
-  .nav-menu {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 100%;
-      max-width: 300px;
-      height: 100vh;
-      background: rgba(255, 255, 255, 0.98);
-      backdrop-filter: blur(10px);
-      padding: 4rem 2rem;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 2rem;
-      transition: right 0.3s ease-in-out;
-      box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-      z-index: 2000;
-  }
-
-  .nav-menu.active {
-      right: 0;
-  }
-
-  .hamburger.active span:first-child {
-      transform: translateY(9px) rotate(45deg);
-  }
-
-  .hamburger.active span:nth-child(2) {
-      opacity: 0;
-  }
-
-  .hamburger.active span:last-child {
-      transform: translateY(-9px) rotate(-45deg);
-  }
-
-  .about-image {
-    max-width: 500px;
-    width: 100%;
-  }
-
-  .education-container {
-      flex-direction: column;
-      gap: 2rem;
-  }
-
-  .education-image {
-      order: -1;
-  }
-
-  .education-content, .education-image {
-      width: 100%;
-  }
-
-  .skills-container {
-      gap: 2rem;
-  }
-
-  .skills-category h3 {
-      font-size: 1.3rem;
-  }
-
-  .skill-item {
-      font-size: 0.9rem;
-      padding: 0.6rem 1.2rem;
-  }
-
-  .projects {
-    columns: 1;
+/* XS Screens (0-576px) */
+@media (max-width: 576px) {
+  .section,
+  .tech-stack {
+    padding: 2rem 0.8rem;
   }
 }
