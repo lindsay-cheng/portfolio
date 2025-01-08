@@ -147,7 +147,7 @@ html {
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 4rem 2rem;
+  padding: 4rem 0;
   background: #fff;
   scroll-margin-top: 5rem;
 }
@@ -568,6 +568,9 @@ html {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .footer-left {
@@ -588,7 +591,9 @@ html {
 }
 
 .footer-right {
-  text-align: right;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .contact-info {
@@ -649,50 +654,201 @@ html {
   filter: invert(1);
 }
 
-/* Standard Breakpoints:
-xs: 0-576px (Default styles)
-sm: 576px-768px
-md: 768px-992px
-lg: 992px-1200px
-xl: 1200px+ */
+/* Add these media queries at the end of your styles.css file */
 
-/* XL Screens (1200px+) */
-@media (max-width: 1200px) {
-  .section,
-  .tech-stack {
-    padding: 4rem 2rem;
+/* Large screens (up to 1200px) */
+@media screen and (max-width: 1200px) {
+  .section, .projects, .experience-timeline, .education-container, .about {
+    padding: 4rem 1rem;
   }
-  
-  .about,
-  .education-container,
-  .experience-timeline,
-  .projects,
-  .skills-container,
-  .footer-content {
+}
+
+/* Medium screens (up to 992px) */
+@media screen and (max-width: 992px) {
+  .projects {
+    columns: 1;
+  }
+
+  .about {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .about-image {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+
+  .about-content {
+    max-width: 100%;
+  }
+
+  .education-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .education-image {
+    order: -1;
+  }
+
+  .skills-container {
     padding: 0;
   }
 }
 
-/* MD Screens (768px-992px) */
-@media (max-width: 992px) {
-  .section,
-  .tech-stack {
-    padding: 3rem 1.5rem;
+/* Small screens (up to 768px) */
+@media screen and (max-width: 768px) {
+  /* Navigation menu */
+  .nav-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.98);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transition: right 0.3s ease-in-out;
+    padding: 2rem;
+  }
+
+  .nav-menu.active {
+    display: flex;
+    right: 0;
+  }
+
+  .nav-hamburger-container {
+    display: block;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
+  /* Sections */
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .about-image {
+    max-width: 70%;
+  }
+
+  .experience-item {
+    padding: 1.5rem;
+  }
+
+  .project-card {
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-right {
+    justify-content: center;
+  }
+
+  .contact-info {
+    align-items: center;
   }
 }
 
-/* SM Screens (576px-768px) */
-@media (max-width: 768px) {
-  .section,
-  .tech-stack {
-    padding: 2.5rem 1rem;
+/* Extra small screens (up to 576px) */
+@media screen and (max-width: 576px) {
+  .nav {
+    padding: 0.8rem 1rem;
+  }
+
+  .nav-left-buttons {
+    gap: 0.5rem;
+  }
+
+  .nav-left-buttons .nav-button {
+    width: 36px;
+    height: 36px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .about-image {
+    max-width: 90%;
+  }
+
+  .about-content h2 {
+    font-size: 1.75rem;
+  }
+
+  .education-content h3 {
+    font-size: 1.75rem;
+  }
+
+  .skills-category h3 {
+    font-size: 1.25rem;
+  }
+
+  .skill-item {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  .project-image {
+    height: 200px;
+  }
+
+  .project-content {
+    padding: 1.5rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .tech-tag {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .project-link {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.8rem;
   }
 }
 
-/* XS Screens (0-576px) */
-@media (max-width: 576px) {
-  .section,
-  .tech-stack {
-    padding: 2rem 0.8rem;
+/* Fix for iOS Safari 100vh issue */
+@supports (-webkit-touch-callout: none) {
+  .nav-menu {
+    height: -webkit-fill-available;
   }
+}
+
+/* Body styles when menu is open */
+body.menu-open {
+  overflow: hidden;
 }
