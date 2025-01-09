@@ -127,29 +127,35 @@ document.querySelectorAll('.nav a').forEach(link => {
     });
 });
 
-// Mobile Menu Functionality
+// Updated JavaScript for smooth menu handling
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
-const body = document.body;
+const navOverlay = document.querySelector('.nav-overlay');
 
 function toggleMenu() {
     hamburger.classList.toggle('active');
     navMenu.classList.toggle('active');
-    body.classList.toggle('menu-open');
+    navOverlay.classList.toggle('active');
 }
 
+// Toggle menu on hamburger click
 hamburger.addEventListener('click', toggleMenu);
 
+// Close menu when clicking overlay
+navOverlay.addEventListener('click', toggleMenu);
+
+// Close menu when clicking a link
 document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', () => {
         hamburger.classList.remove('active');
         navMenu.classList.remove('active');
-        body.classList.remove('menu-open');
+        navOverlay.classList.remove('active');
     });
 });
 
-document.addEventListener('click', (e) => {
-    if (!hamburger.contains(e.target) && !navMenu.contains(e.target) && navMenu.classList.contains('active')) {
+// Handle escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navMenu.classList.contains('active')) {
         toggleMenu();
     }
 });
