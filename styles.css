@@ -182,7 +182,7 @@ html {
 
 .about-image {
   flex: 1;
-  max-width: 30%;
+  max-width: 25%;
   border-radius: 20px;
   overflow: hidden;
   display: flex;
