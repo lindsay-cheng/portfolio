@@ -160,3 +160,28 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
+// Intersection Observer for staggered animations
+function createStaggeredObserver(selector, animationProps) {
+    const elements = document.querySelectorAll(selector);
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    
+    elements.forEach((element, index) => {
+      element.style.setProperty('--stagger-delay', `${index * 0.05}s`);
+      observer.observe(element);
+    });
+  }
+  
+  // Apply staggered animations
+  document.addEventListener('DOMContentLoaded', () => {
+    createStaggeredObserver('.project-card', { y: 20, opacity: 0 });
+    createStaggeredObserver('.skill-item', { y: 10, opacity: 0 });
+    createStaggeredObserver('.experience-item', { y: 20, opacity: 0 });
+  });
