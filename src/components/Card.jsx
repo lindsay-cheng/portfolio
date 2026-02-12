@@ -75,7 +75,7 @@ function Card({ item, type = 'experience' }) {
               rel="noopener noreferrer" 
               className="github-button"
             >
-              <img src="/assets/icons/github-icon.png" alt="GitHub" />
+              <img src="assets/icons/github-icon.png" alt="GitHub" />
               <span>View on Github</span>
             </a>
           )}
