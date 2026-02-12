@@ -24,7 +24,7 @@ export const experiencesData = [
     location: "Toronto, ON",
     description: "Built Python control system for Helmholtz cage satellite testing, supporting 50+ test sessions. developed orbital simulation pipeline with SGP4 propagation for hardware-in-the-loop testing and created automated logging for telemetry debugging.",
     tags: ["Python", "Satellite Systems", "Control Systems", "SGP4", "Hardware-in-the-Loop"],
-    image: "assets/experience-imgs/cubesat.avif"
+    image: "/assets/experience-imgs/cubesat.avif"
   },
   {
     id: "materials-research",
@@ -34,11 +34,11 @@ export const experiencesData = [
     location: "Toronto, ON",
     description: "Improved thermal conductivity of Phase Change Materials by 10% for EV batteries using biochar composites. developed calcium-catalyzed pyrolysis process achieving faster thermal response at lower temperatures. automated Raman spectroscopy analysis with Python, processing 100+ samples and cutting analysis time by 80%.",
     tags: ["Materials Science", "Research", "Python", "Fityk", "Data Analysis", "Raman Spectroscopy", "Composite Materials", "Analytical Lab Techniques"],
-    image: "assets/experience-imgs/XRD-Bruker.png",
+    image: "/assets/experience-imgs/XRD-Bruker.png",
     // poster shown inside the experience popup
     poster: {
-      src: "assets/experience-imgs/green-tech-poster.png",
-      href: "assets/experience-imgs/green-tech-poster.png",
+      src: "/assets/experience-imgs/green-tech-poster.png",
+      href: "/assets/experience-imgs/green-tech-poster.png",
       alt: "Enhanced Thermal Conductivity in Wood Biochar Phase Change Material Dopants via Calcium-Catalyzed Graphitization (poster)",
       caption: "Research poster from Green Technologies Lab, presented at UnERD Summer 2025"
     }
@@ -51,11 +51,11 @@ export const projectsData = [
     title: "ClearMark",
     description: "iOS app for AI-powered grading with Google OAuth authentication and MVVM architecture. built Node.js backend with PostgreSQL on Render, handling file uploads to Cloudflare R2 with CI/CD deployment.",
     tags: ["Swift", "Node.js", "Express", "PostgreSQL", "Google OAuth"],
-    image: "assets/project-imgs/SolarDistillation.png",
+    image: "/assets/project-imgs/SolarDistillation.png",
     // optional: a small looping preview video (recommended over gifs)
     // add file under `public/assets/project-videos/` then set:
     // media: { type: "video", src: "assets/project-videos/clearmark-demo.mp4", poster: "assets/project-imgs/clearmark-poster.png" }
-    media: { type: "video", src: "assets/project-videos/clearmark-demo.mp4" },
+    media: { type: "video", src: "/assets/project-videos/clearmark-demo.mp4" },
     link: "",
     githubLink: "https://github.com/ClearMarkApp/ios"
   },
@@ -64,7 +64,7 @@ export const projectsData = [
     title: "Send",
     description: "Social bouldering iOS app with YOLOv8 hold detection and pathfinding algorithm that processes wall images in under 2 seconds. FastAPI backend handles ArUco marker camera calibration.",
     tags: ["Swift", "YOLOv8", "OpenCV", "FastAPI", "MongoDB"],
-    image: "assets/project-imgs/send-presentation.png",
+    image: "/assets/project-imgs/send-presentation.png",
     link: "",
     githubLink: "https://github.com/raiyan37/Send."
   },
@@ -73,7 +73,7 @@ export const projectsData = [
     title: "Water Bottle Defect Detection System",
     description: "Automated quality control system using YOLOv8 and OpenCV with Tkinter dashboard and SQLite logging. trained on 300+ annotated images across 4 defect classes with centroid-based bottle tracking.",
     tags: ["Python", "YOLOv8", "OpenCV", "SQLite", "Tkinter"],
-    image: "assets/project-imgs/defectdetectionscreenie.png",
+    image: "/assets/project-imgs/defectdetectionscreenie.png",
     link: "",
     githubLink: "https://github.com/lindsay-cheng/defect-detection"
   },
@@ -83,7 +83,7 @@ export const projectsData = [
     title: "Reversi Game Bot",
     description: "Minimax engine with alpha-beta pruning in C, making moves in 800ms at 7-ply depth. heuristic evaluation uses position weighting and mobility analysis, improving win rate by 20%.",
     tags: ["C"],
-    image: "assets/project-imgs/othello.jpg",
+    image: "/assets/project-imgs/othello.jpg",
     link: "",
     githubLink: "https://github.com/lindsay-cheng/game-bot"
   }
