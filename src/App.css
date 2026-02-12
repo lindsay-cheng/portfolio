@@ -407,9 +407,15 @@ html::-webkit-scrollbar {
 
 /* Experience Card - Image with Info Below */
 .experience-card-container {
+  appearance: none;
+  -webkit-appearance: none;
   display: flex;
   flex-direction: column;
   cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0;
+  text-align: left;
 }
 
 .experience-card {
@@ -419,6 +425,20 @@ html::-webkit-scrollbar {
   overflow: hidden;
   border: 1px solid #e5e5e5;
   margin-bottom: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.experience-card-container:hover .experience-card,
+.experience-card-container:focus-visible .experience-card {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+  border-color: rgba(0, 0, 0, 0.18);
+}
+
+.experience-card-container:focus-visible {
+  outline: 2px solid rgba(0, 113, 227, 0.5);
+  outline-offset: 6px;
+  border-radius: 22px;
 }
 
 .experience-card img {
@@ -451,6 +471,19 @@ html::-webkit-scrollbar {
   margin: 0;
 }
 
+.experience-card-hint {
+  margin-top: 0.35rem;
+  font-size: 0.9rem;
+  color: #6e6e73;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.experience-card-container:hover .experience-card-hint,
+.experience-card-container:focus-visible .experience-card-hint {
+  color: #1d1d1f;
+  transform: translateX(2px);
+}
+
 /* Experience Popup */
 .popup-backdrop {
   position: fixed;
@@ -475,6 +508,13 @@ html::-webkit-scrollbar {
   overflow-y: auto;
   position: relative;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  /* hide scrollbar in popup while keeping scroll */
+  scrollbar-width: none; /* firefox */
+  -ms-overflow-style: none; /* IE and edge */
+}
+
+.popup-content::-webkit-scrollbar {
+  display: none; /* chrome, safari and opera */
 }
 
 .popup-close {
@@ -486,14 +526,11 @@ html::-webkit-scrollbar {
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  font-size: 2rem;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
   color: #1d1d1f;
   z-index: 1;
-  line-height: 1;
   padding: 0;
 }
 

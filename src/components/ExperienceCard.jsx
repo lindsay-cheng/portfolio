@@ -20,9 +20,11 @@ function ExperienceCard({ experience }) {
 
   return (
     <>
-      <div 
+      <button
+        type="button"
         className="experience-card-container"
         onClick={() => setIsPopupOpen(true)}
+        aria-label={`View details: ${experience.title} — ${experience.company}`}
       >
         <div className="experience-card">
           <img src={experience.image} alt={experience.title} />
@@ -30,8 +32,9 @@ function ExperienceCard({ experience }) {
         <div className="experience-card-info">
           <p className="experience-card-company">{experience.company}</p>
           <h3 className="experience-card-title">{experience.title}</h3>
+          <p className="experience-card-hint">View details →</p>
         </div>
-      </div>
+      </button>
       
       {isPopupOpen && (
         <ExperiencePopup 

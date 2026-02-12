@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { X } from 'lucide-react';
 
 // popup component to display experience details
 function ExperiencePopup({ experience, onClose }) {
@@ -26,8 +27,8 @@ function ExperiencePopup({ experience, onClose }) {
   return (
     <div className="popup-backdrop" onClick={handleBackdropClick}>
       <div className="popup-content">
-        <button className="popup-close" onClick={onClose}>
-          ×
+        <button className="popup-close" onClick={onClose} aria-label="close popup">
+          <X size={22} aria-hidden="true" focusable="false" />
         </button>
         
         <div className="popup-image">
