@@ -18,7 +18,13 @@ body {
 }
 
 html {
-  scrollbar-gutter: stable;
+  /* hide scrollbar for chrome, safari and opera */
+  scrollbar-width: none; /* firefox */
+  -ms-overflow-style: none; /* IE and edge */
+}
+
+html::-webkit-scrollbar {
+  display: none; /* chrome, safari and opera */
 }
 
 /* Navigation */
