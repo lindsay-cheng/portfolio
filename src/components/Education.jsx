@@ -13,7 +13,7 @@ function Education() {
           <p className="education-awards">First Year Summer Research Fellowship (2025)</p>
         </div>
         <div className="education-image">
-          <img src="/assets/images-main/U-of-T-campus-St.-George.webp" alt="University of Toronto Campus" />
+          <img src={`${import.meta.env.BASE_URL}assets/images-main/U-of-T-campus-St.-George.webp`} alt="University of Toronto Campus" />
         </div>
       </div>
     </section>

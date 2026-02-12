@@ -144,7 +144,7 @@ export default function Dock({
     {
       icon: <FileText size={18} />,
       label: 'Resume',
-      onClick: () => window.open('/assets/nav-bar-content/Lindsay_Cheng_Resume.pdf', '_blank')
+      onClick: () => window.open(`${import.meta.env.BASE_URL}assets/nav-bar-content/Lindsay_Cheng_Resume.pdf`, '_blank')
     },
     {
       icon: <Github size={18} />,
