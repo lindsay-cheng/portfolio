@@ -5,6 +5,8 @@ function Card({ item, type = 'experience' }) {
   const isExperience = type === 'experience';
   const media = item?.media;
   const hasVideo = media?.type === 'video' && media?.src && media.src.trim() !== "";
+  const letterboxBgSrc = media?.backgroundSrc?.trim?.() ? media.backgroundSrc.trim() : "";
+  const shouldLetterbox = hasVideo && !!letterboxBgSrc;
   const videoRef = useRef(null);
 
   // use intersection observer to play/pause video when in/out of view
@@ -33,7 +35,14 @@ function Card({ item, type = 'experience' }) {
   
   return (
     <div className="card">
-      <div className="card-image">
+      <div
+        className={`card-image${shouldLetterbox ? " card-image--letterbox" : ""}`}
+        style={
+          shouldLetterbox
+            ? { backgroundImage: `url(${letterboxBgSrc})` }
+            : undefined
+        }
+      >
         {hasVideo ? (
           <video
             ref={videoRef}

@@ -7,8 +7,6 @@ function Footer() {
         <div className="footer-left">
           <p className="footer-name">{contactData.name}</p>
           <p>{contactData.title}</p>
-          <p>{contactData.university}</p>
-          <p>{contactData.location}</p>
         </div>
         <div className="footer-right">
           <div className="contact-info">
@@ -26,9 +24,6 @@ function Footer() {
               </a>
               <a href={contactData.social.linkedin} target="_blank" rel="noopener noreferrer" className="social-link">
                 <img src="assets/icons/linkedin-icon.png" alt="LinkedIn" />
-              </a>
-              <a href={contactData.social.instagram} target="_blank" rel="noopener noreferrer" className="social-link">
-                <img src="assets/icons/instagram.png" alt="Instagram" />
               </a>
             </div>
           </div>
