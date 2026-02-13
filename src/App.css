@@ -298,6 +298,23 @@ html::-webkit-scrollbar {
   display: block;
 }
 
+.card-image--letterbox {
+  /* use a background image to fill the unused space when a video is a slimmer aspect ratio */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card-image--letterbox video {
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
 .card-content {
   padding: 2rem;
   flex: 1;

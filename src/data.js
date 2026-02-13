@@ -66,7 +66,12 @@ export const projectsData = [
     description: "Social bouldering iOS app with YOLOv8 hold detection and pathfinding algorithm that processes wall images in under 2 seconds. FastAPI backend handles ArUco marker camera calibration.",
     tags: ["Swift", "YOLOv8", "OpenCV", "FastAPI", "MongoDB"],
     image: `${base}assets/project-imgs/send-presentation.png`,
-    media: { type: "video", src: `${base}assets/project-videos/send-demo-resized.mp4` },
+    media: { 
+      type: "video", 
+      src: `${base}assets/project-videos/send-demo.mp4`,
+      // letterbox background image behind slimmer video aspect ratios
+      backgroundSrc: `${base}assets/project-imgs/tahoe-bg.jpg`
+    },
     link: "",
     githubLink: "https://github.com/raiyan37/Send."
   },
@@ -93,15 +98,12 @@ export const projectsData = [
 
 export const contactData = {
   name: "Lindsay Cheng",
-  title: "Computer Engineering Student",
-  university: "University of Toronto - Toronto, Ontario, Canada",
-  location: "Richmond Hill, Ontario, Canada",
+  title: "Computer Engineering",
   email: "lindsaycheng2@gmail.com",
   phone: "+1 (647) 898 6526",
   social: {
     github: "https://github.com/lindsay-cheng",
     linkedin: "https://www.linkedin.com/in/lindsay-cheng-b02175309/",
-    instagram: "https://www.instagram.com/l.cheng__/?hl=en"
   }
 };
 
