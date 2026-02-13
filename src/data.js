@@ -4,11 +4,11 @@ const base = import.meta.env.BASE_URL;
 export const skillsData = [
   {
     category: "Languages",
-    skills: ["Python", "C/C++", "Swift", "MATLAB", "JavaScript", "HTML", "CSS"]
+    skills: ["Python", "C/C++", "Swift", "MATLAB", "JavaScript", "TypeScript", "HTML", "CSS"]
   },
   {
     category: "Technologies",
-    skills: ["React", "Node.js", "Express", "PostgreSQL", "FastAPI", "MongoDB", "SQLite", "Ultralytics", "OpenCV", "PyTorch"]
+    skills: ["React", "Node.js", "Express", "PostgreSQL", "FastAPI", "MongoDB", "SQLite", "Ultralytics", "OpenCV", "PyTorch", "Redis"]
   },
   {
     category: "Tools & Platforms",
