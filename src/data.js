@@ -66,6 +66,7 @@ export const projectsData = [
     description: "Social bouldering iOS app with YOLOv8 hold detection and pathfinding algorithm that processes wall images in under 2 seconds. FastAPI backend handles ArUco marker camera calibration.",
     tags: ["Swift", "YOLOv8", "OpenCV", "FastAPI", "MongoDB"],
     image: `${base}assets/project-imgs/send-presentation.png`,
+    media: { type: "video", src: `${base}assets/project-videos/send-demo-resized.mp4` },
     link: "",
     githubLink: "https://github.com/raiyan37/Send."
   },
