@@ -23,7 +23,7 @@ export const experiencesData = [
     company: "University of Toronto Aerospace Team (UTAT) - Space Systems",
     period: "Sep 2025 - Present",
     location: "Toronto, ON",
-    description: "Built Python control system for Helmholtz cage satellite testing, supporting 50+ test sessions. developed orbital simulation pipeline with SGP4 propagation for hardware-in-the-loop testing and created automated logging for telemetry debugging.",
+    description: "Built Python control system for Helmholtz cage satellite testing, supporting 50+ test sessions. Developed orbital simulation pipeline with SGP4 propagation for hardware-in-the-loop testing and created automated logging for telemetry debugging.",
     tags: ["Python", "Satellite Systems", "Control Systems", "SGP4", "Hardware-in-the-Loop"],
     image: `${base}assets/experience-imgs/cubesat.avif`
   },
@@ -33,7 +33,7 @@ export const experiencesData = [
     company: "Green Technologies Lab (University of Toronto)",
     period: "May 2025 - Aug 2025",
     location: "Toronto, ON",
-    description: "Improved thermal conductivity of Phase Change Materials by 10% for EV batteries using biochar composites. developed calcium-catalyzed pyrolysis process achieving faster thermal response at lower temperatures. automated Raman spectroscopy analysis with Python, processing 100+ samples and cutting analysis time by 80%.",
+    description: "Improved thermal conductivity of Phase Change Materials by 10% for EV batteries using biochar composites. Developed calcium-catalyzed pyrolysis process achieving faster thermal response at lower temperatures. Automated Raman spectroscopy analysis with Python, processing 100+ samples and cutting analysis time by 80%.",
     tags: ["Materials Science", "Research", "Python", "Fityk", "Data Analysis", "Raman Spectroscopy", "Composite Materials", "Analytical Lab Techniques"],
     image: `${base}assets/experience-imgs/XRD-Bruker.png`,
     // poster shown inside the experience popup
@@ -50,7 +50,7 @@ export const projectsData = [
   {
     id: "clearmark",
     title: "ClearMark",
-    description: "iOS app for AI-powered grading with Google OAuth authentication and MVVM architecture. built Node.js backend with PostgreSQL on Render, handling file uploads to Cloudflare R2 with CI/CD deployment.",
+    description: "iOS app for AI-powered grading with Google OAuth authentication and MVVM architecture. Built Node.js backend with PostgreSQL on Render, handling file uploads to Cloudflare R2 with CI/CD deployment.",
     tags: ["Swift", "Node.js", "Express", "PostgreSQL", "Google OAuth"],
     image: `${base}assets/project-imgs/SolarDistillation.png`,
     // optional: a small looping preview video (recommended over gifs)
@@ -78,17 +78,16 @@ export const projectsData = [
   {
     id: "water-bottle-defect",
     title: "Water Bottle Defect Detection System",
-    description: "Automated quality control system using YOLOv8 and OpenCV with Tkinter dashboard and SQLite logging. trained on 300+ annotated images across 4 defect classes with centroid-based bottle tracking.",
+    description: "Automated quality control system using YOLOv8 and OpenCV with Tkinter dashboard and SQLite logging. Trained on 300+ annotated images across 4 defect classes with centroid-based bottle tracking.",
     tags: ["Python", "YOLOv8", "OpenCV", "SQLite", "Tkinter"],
     image: `${base}assets/project-imgs/defectdetectionscreenie.png`,
     link: "",
     githubLink: "https://github.com/lindsay-cheng/defect-detection"
   },
-
   {
     id: "reversi-game-bot",
     title: "Reversi Game Bot",
-    description: "Minimax engine with alpha-beta pruning in C, making moves in 800ms at 7-ply depth. heuristic evaluation uses position weighting and mobility analysis, improving win rate by 20%.",
+    description: "Minimax engine with alpha-beta pruning in C, making moves in 800ms at 7-ply depth. Heuristic evaluation uses position weighting and mobility analysis, improving win rate by 20%.",
     tags: ["C"],
     image: `${base}assets/project-imgs/othello.jpg`,
     link: "",
