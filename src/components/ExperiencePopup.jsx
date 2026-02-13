@@ -1,9 +1,13 @@
-import { useEffect } from 'react';
-import { X } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
+import { ChevronDown, X } from 'lucide-react';
 
 // popup component to display experience details
 function ExperiencePopup({ experience, onClose }) {
   const poster = experience?.poster;
+  const contentRef = useRef(null);
+  const [shouldRenderScrollHint, setShouldRenderScrollHint] = useState(false);
+  const [isScrollHintVisible, setIsScrollHintVisible] = useState(false);
+  const scrollHintDismissedRef = useRef(false);
 
   // close popup when clicking on the backdrop
   const handleBackdropClick = (e) => {
@@ -24,12 +28,80 @@ function ExperiencePopup({ experience, onClose }) {
     return () => document.removeEventListener('keydown', handleEscape);
   }, [onClose]);
 
+  // show a subtle hint when the popup is scrollable (scrollbar is hidden)
+  useEffect(() => {
+    const el = contentRef.current;
+    if (!el) return;
+
+    // reset on open/experience change
+    scrollHintDismissedRef.current = false;
+    setShouldRenderScrollHint(false);
+    setIsScrollHintVisible(false);
+
+    let hideTimer;
+
+    const compute = () => {
+      if (scrollHintDismissedRef.current) return;
+      const hasOverflow = el.scrollHeight - el.clientHeight > 8;
+      const atTop = el.scrollTop < 8;
+      setShouldRenderScrollHint(hasOverflow);
+      setIsScrollHintVisible(hasOverflow && atTop);
+    };
+
+    const onScroll = () => {
+      if (scrollHintDismissedRef.current) return;
+      if (el.scrollTop > 8) {
+        scrollHintDismissedRef.current = true;
+        setIsScrollHintVisible(false);
+        // keep it mounted briefly so the fade-out transition can play
+        hideTimer = window.setTimeout(() => setShouldRenderScrollHint(false), 220);
+      }
+    };
+
+    compute();
+    el.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', compute);
+
+    return () => {
+      el.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', compute);
+      if (hideTimer) window.clearTimeout(hideTimer);
+    };
+  }, [experience?.id]);
+
+  const handleScrollHintClick = () => {
+    const el = contentRef.current;
+    if (!el) return;
+    el.scrollBy({ top: 260, behavior: 'smooth' });
+  };
+
   return (
     <div className="popup-backdrop" onClick={handleBackdropClick}>
-      <div className="popup-content">
+      <div className="popup-content" ref={contentRef}>
         <button className="popup-close" onClick={onClose} aria-label="close popup">
           <X size={22} aria-hidden="true" focusable="false" />
         </button>
+
+        {shouldRenderScrollHint && (
+          <div
+            className={`popup-scroll-cue ${isScrollHintVisible ? 'is-visible' : ''}`}
+            aria-hidden={!isScrollHintVisible}
+          >
+            <div className="popup-scroll-fade" aria-hidden="true" />
+            <button
+              type="button"
+              className="popup-scroll-hint"
+              onClick={handleScrollHintClick}
+              aria-label="scroll for more"
+              tabIndex={isScrollHintVisible ? 0 : -1}
+            >
+              <span className="popup-scroll-hint-text">
+                More
+              </span>
+              <ChevronDown size={16} aria-hidden="true" focusable="false" />
+            </button>
+          </div>
+        )}
         
         <div className="popup-image">
           <img src={experience.image} alt={experience.title} />
