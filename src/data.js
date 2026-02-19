@@ -56,7 +56,10 @@ export const projectsData = [
     // optional: a small looping preview video (recommended over gifs)
     // add file under `public/assets/project-videos/` then set:
     // media: { type: "video", src: "assets/project-videos/clearmark-demo.mp4", poster: "assets/project-imgs/clearmark-poster.png" }
-    media: { type: "video", src: `${base}assets/project-videos/clearmark-demo.mp4` },
+    media: {
+      type: "video",
+      src: `${base}assets/project-videos/clearmark-demo.mp4`
+    },
     link: "",
     githubLink: "https://github.com/ClearMarkApp/ios"
   },
@@ -78,9 +81,12 @@ export const projectsData = [
   {
     id: "water-bottle-defect",
     title: "Water Bottle Defect Detection System",
-    description: "Automated quality control system using YOLOv8 and OpenCV with Tkinter dashboard and SQLite logging. Trained on 300+ annotated images across 4 defect classes with centroid-based bottle tracking.",
+    description: "Automated quality control system that detects defects in Kirkland plastic water ottles. Used YOLOv8 and OpenCV with Tkinter dashboard and SQLite logging. Trained on 300+ annotated images across 4 defect classes with Bytetrack bottle tracking.",
     tags: ["Python", "YOLOv8", "OpenCV", "SQLite", "Tkinter"],
-    image: `${base}assets/project-imgs/defectdetectionscreenie.png`,
+    media: { 
+      type: "video", 
+      src: `${base}assets/project-videos/defect-detection-demo.mp4`
+    },
     link: "",
     githubLink: "https://github.com/lindsay-cheng/defect-detection"
   },
