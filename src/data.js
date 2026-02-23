@@ -81,7 +81,7 @@ export const projectsData = [
   {
     id: "water-bottle-defect",
     title: "Water Bottle Defect Detection System",
-    description: "Automated quality control system that detects defects in Kirkland plastic water ottles. Used YOLOv8 and OpenCV with Tkinter dashboard and SQLite logging. Trained on 300+ annotated images across 4 defect classes with Bytetrack bottle tracking.",
+    description: "Automated quality control system that detects defects in Kirkland plastic water bottles. Used YOLOv8 and OpenCV with Tkinter dashboard and SQLite logging. Trained on 300+ annotated images across 4 defect classes with Bytetrack bottle tracking.",
     tags: ["Python", "YOLOv8", "OpenCV", "SQLite", "Tkinter"],
     media: { 
       type: "video", 
