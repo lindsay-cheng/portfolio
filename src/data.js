@@ -12,7 +12,7 @@ export const skillsData = [
   },
   {
     category: "Tools & Platforms",
-    skills: ["Git", "GitHub", "Render", "Postman", "Excel", "Cloud Computing (Render/Cloudflare R2)"]
+    skills: ["Git", "GitHub", "Render", "Postman", "Excel", "Cloud Computing (Render/Cloudflare R2), Roboflow, Linux"]
   }
 ];
 
