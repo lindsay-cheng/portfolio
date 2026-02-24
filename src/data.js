@@ -12,7 +12,7 @@ export const skillsData = [
   },
   {
     category: "Tools & Platforms",
-    skills: ["Git", "GitHub", "Render", "Postman", "Excel", "Cloud Computing (Render/Cloudflare R2), Roboflow, Linux"]
+    skills: ["Git", "GitHub", "Render", "Postman", "Excel", "Cloud Computing (Render/Cloudflare R2)", "Roboflow", "Linux"]
   }
 ];
 
@@ -24,7 +24,7 @@ export const experiencesData = [
     period: "Sep 2025 - Present",
     location: "Toronto, ON",
     description: "Built Python control system for Helmholtz cage satellite testing, supporting 50+ test sessions. Developed orbital simulation pipeline with SGP4 propagation for hardware-in-the-loop testing and created automated logging for telemetry debugging.",
-    tags: ["Python", "Satellite Systems", "Control Systems", "SGP4", "Hardware-in-the-Loop"],
+    tags: ["Python", "Linux", "Control Systems", "SGP4", "Microcontrollers", "HWIL"],
     image: `${base}assets/experience-imgs/cubesat.avif`
   },
   {
