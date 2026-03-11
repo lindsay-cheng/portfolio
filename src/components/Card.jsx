@@ -34,7 +34,7 @@ function Card({ item, type = 'experience' }) {
   }, [hasVideo]);
   
   return (
-    <div className="card">
+    <div className={`card${!isExperience ? " card--project" : ""}`}>
       <div
         className={`card-image${shouldLetterbox ? " card-image--letterbox" : ""}`}
         style={
@@ -82,14 +82,20 @@ function Card({ item, type = 'experience' }) {
               href={item.githubLink} 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="github-button"
+              className={isExperience ? "github-button" : "card-action-link"}
             >
-              <img src={`${import.meta.env.BASE_URL}assets/icons/github-icon.png`} alt="GitHub" />
-              <span>View on Github</span>
+              {isExperience ? (
+                <>
+                  <img src={`${import.meta.env.BASE_URL}assets/icons/github-icon.png`} alt="GitHub" />
+                  <span>View on Github</span>
+                </>
+              ) : (
+                <>View on Github →</>
+              )}
             </a>
           )}
           {item.link && item.link.trim() !== "" && (
-            <a href={item.link} target="_blank" rel="noopener noreferrer" className="card-link">
+            <a href={item.link} target="_blank" rel="noopener noreferrer" className={isExperience ? "card-link" : "card-action-link"}>
               View Project →
             </a>
           )}

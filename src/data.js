@@ -64,6 +64,14 @@ export const projectsData = [
     githubLink: "https://github.com/ClearMarkApp/ios"
   },
   {
+    id: "villara",
+    title: "Villara (Startup)",
+    description: "Connecting talents, freelancers, and trade skills in communities. Services include haircuts, nails, automotive repairs, and more in the coming future. (WIP) ",
+    tags: ["React", "Typescript", "Java", "Spring Boot", "PostgreSQL", "Redux", "Google OAuth", "Tailwind CSS", "AWS EC2", "AWS S3", "NGINX", "Linux", "Docker"],
+    image: `${base}assets/project-imgs/villara-FWUEIDcn.png`,
+    link: "",
+  },
+  {
     id: "send",
     title: "Send",
     description: "Social bouldering iOS app with YOLOv8 hold detection and pathfinding algorithm that processes wall images in under 2 seconds. FastAPI backend handles ArUco marker camera calibration.",
