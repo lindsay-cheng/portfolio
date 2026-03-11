@@ -415,6 +415,71 @@ html::-webkit-scrollbar {
   background-color: #0051a2;
 }
 
+/* project card: subtle link style (matches experience "View details →") */
+.card-action-link {
+  font-size: 0.9rem;
+  color: #6e6e73;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+  margin-top: 0.5rem;
+  display: inline-block;
+}
+
+.card-action-link:hover {
+  color: #1d1d1f;
+  transform: translateX(2px);
+}
+
+/* project card refinements: cleaner, premium feel */
+.card--project {
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card--project .card-content {
+  padding: 1.75rem 2rem;
+}
+
+.card--project .card-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card--project .card-description {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+  color: #6e6e73;
+}
+
+/* project tags: subtle, minimal pills */
+.card--project .card-tags {
+  gap: 0.4rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.card--project .tag {
+  background: #f5f5f7;
+  color: #6e6e73;
+  padding: 0.25rem 0.6rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.card--project .card-actions {
+  margin-top: 0;
+  flex-wrap: wrap;
+}
+
+.card--project .card-action-link {
+  margin-top: 0;
+}
+
 /* Experience Section */
 .card-grid {
   display: grid;
@@ -734,15 +799,23 @@ html::-webkit-scrollbar {
 }
 
 /* Projects Section - Masonry Layout */
+/* items flow into columns in order (1,2,1,2...) so proj1|proj2, proj3|proj4, proj5 - cards slot vertically within each column */
 .projects-masonry {
-  columns: 2;
-  column-gap: 2rem;
+  display: flex;
+  margin-left: -2rem;
+  width: auto;
+}
+
+.projects-masonry-column {
+  padding-left: 2rem;
+  background-clip: padding-box;
+}
+
+.projects-masonry-column > * {
+  margin-bottom: 2rem;
 }
 
 .projects-masonry .card {
-  break-inside: avoid;
-  margin-bottom: 2rem;
-  display: inline-block;
   width: 100%;
 }
 
@@ -835,10 +908,6 @@ html::-webkit-scrollbar {
     padding: 3.75rem var(--page-padding);
   }
 
-  .projects-masonry {
-    columns: 1;
-  }
-
   .about {
     flex-direction: column;
     gap: 2rem;
@@ -872,6 +941,19 @@ html::-webkit-scrollbar {
 @media screen and (max-width: 768px) {
   :root {
     --page-padding: 1.5rem;
+  }
+
+  /* masonry switches to 1 column - remove column gap */
+  .projects-masonry {
+    margin-left: 0;
+  }
+
+  .projects-masonry-column {
+    padding-left: 0;
+  }
+
+  .projects-masonry-column > * {
+    margin-bottom: 1.5rem;
   }
 
   .nav-menu {
@@ -941,9 +1023,6 @@ html::-webkit-scrollbar {
     font-size: 1.1rem;
   }
 
-  .projects-masonry .card {
-    margin-bottom: 1.5rem;
-  }
 
   .footer-content {
     flex-direction: column;
