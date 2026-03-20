@@ -4,19 +4,19 @@ const base = import.meta.env.BASE_URL;
 export const skillsData = [
   {
     category: "Languages",
-    skills: ["Python", "C/C++", "Swift", "MATLAB", "JavaScript", "TypeScript", "HTML", "Tailwind CSS"]
+    skills: ["Python", "C/C++", "Swift", "JavaScript", "TypeScript", "HTML", "Tailwind CSS", "MATLAB"]
   },
   {
     category: "Frameworks & Libraries",
-    skills: ["React", "Next.js", "Express", "Drizzle ORM", "FastAPI", "OpenCV", "Ultralytics"]
+    skills: ["React", "Node.js", "Next.js", "Express", "Drizzle ORM", "FastAPI", "OpenCV"]
   },
   {
     category: "Technologies",
-    skills: ["PostgreSQL", "MongoDB", "SQLite", "Node.js", "Redis", "Docker", "BullMQ", "NGINX"]
+    skills: ["PostgreSQL", "MongoDB", "SQLite", "Redis", "Docker", "BullMQ", "NGINX"]
   },
   {
     category: "Developer Tools",
-    skills: ["Git", "GitHub", "Render", "Postman", "Turborepo", "Cloudflare R2", "Linux"]
+    skills: ["Git", "GitHub", "Postman", "Turborepo", "Cloudflare R2", "Linux"]
   }
 ];
 
