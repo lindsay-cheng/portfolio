@@ -93,6 +93,16 @@ export const skillsData = [
 
 export const experiencesData = [
   {
+    id: "yep-education",
+    title: "Software Engineer",
+    company: "YEP Education",
+    period: "May 2026 - Aug 2026",
+    location: "Toronto, ON",
+    description: "Scaling core architectures and LMS.",
+    tags: ["PostgreSQL", "Redis", "Docker", "Playwright", "Sentry"],
+    image: `${base}assets/experience-imgs/yep-logo.jpg`
+  },
+  {
     id: "utat-adcs",
     title: "Software Developer, Attitude Determination & Control Systems (ADCS)",
     company: "University of Toronto Aerospace Team (UTAT) - Space Systems",
