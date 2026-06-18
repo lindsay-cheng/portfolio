@@ -1,19 +1,27 @@
+import { educationData } from '../data';
 import SectionHeader from './SectionHeader';
+import './Education.css';
 
 function Education() {
+  const { school, subtitle, awards, period, gpa, image } = educationData;
+
   return (
     <section className="section" id="education">
-      <SectionHeader>Education</SectionHeader>
-      <div className="education-container">
-        <div className="education-content">
-          <h3>University of Toronto St. George</h3>
-          <p className="education-subtitle">BASc Computer Engineering + PEY Co-op</p>
-          <p className="education-period">Expected April 2030</p>
-          <p className="education-degree">3.90/4.0 cGPA</p>
-          <p className="education-awards">First Year Summer Research Fellowship (2025)</p>
+      <SectionHeader compact>Education</SectionHeader>
+      <div className="education-container reveal-item">
+        <div className="education-thumb">
+          <img src={image.src} alt={image.alt} />
         </div>
-        <div className="education-image">
-          <img src={`${import.meta.env.BASE_URL}assets/images-main/U-of-T-campus-St.-George.webp`} alt="University of Toronto Campus" />
+        <div className="education-content">
+          <div className="education-main">
+            <h3>{school}</h3>
+            <p className="education-subtitle">{subtitle}</p>
+            <p className="education-awards">{awards}</p>
+          </div>
+          <div className="education-meta">
+            <p className="education-period">{period}</p>
+            <p className="education-degree">{gpa}</p>
+          </div>
         </div>
       </div>
     </section>
@@ -21,4 +29,3 @@ function Education() {
 }
 
 export default Education;
-

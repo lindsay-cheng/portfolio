@@ -1,0 +1,137 @@
+.hero {
+  min-height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding: clamp(4.75rem, 10vh, 6rem) 0 var(--section-gap);
+}
+
+.hero-content {
+  max-width: var(--max-width);
+  width: 100%;
+  padding: 0 var(--page-padding);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 180px;
+  gap: clamp(2rem, 7vw, 5rem);
+  align-items: start;
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 4.75rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin-bottom: 0.45rem;
+  color: var(--color-text);
+}
+
+.hero-thesis {
+  font-family: var(--font-ui);
+  letter-spacing: 0.01em;
+  max-width: 40rem;
+  color: var(--color-text);
+  font-size: clamp(1rem, 2vw, 1.12rem);
+  line-height: 1.45;
+}
+
+.hero-about-block {
+  max-width: 38rem;
+  margin-top: 1.35rem;
+}
+
+.hero-about-block h2 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 650;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+  margin-bottom: 0.25rem;
+}
+
+.hero-about-block p {
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-muted);
+}
+
+.hero-about-link {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.hero-about-link:hover {
+  color: var(--color-text);
+}
+
+.hero-about-link:focus-visible {
+  outline: 2px solid rgba(0, 113, 227, 0.45);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.hero-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 32%;
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    padding-top: 5rem;
+  }
+
+  .hero-content {
+    grid-template-columns: minmax(0, 1fr) 120px;
+    gap: 1.25rem;
+  }
+
+  .hero-photo {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-photo {
+    width: 110px;
+    height: 110px;
+    order: -1;
+  }
+
+  .hero-thesis {
+    font-size: 1rem;
+  }
+
+  .hero-about-block {
+    margin-top: 1rem;
+  }
+}

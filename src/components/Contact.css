@@ -1,0 +1,31 @@
+.contact-footer {
+  padding: var(--section-gap) var(--page-padding) var(--section-bottom-safe);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+
+.contact-footer-content {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+.contact-link {
+  color: var(--color-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+  color: var(--color-text);
+}
+
+.contact-separator {
+  color: var(--color-border);
+  user-select: none;
+}

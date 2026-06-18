@@ -1,10 +1,35 @@
-'use client';
-
 import { motion, useMotionValue, useSpring, useTransform, AnimatePresence } from 'motion/react';
 import { Children, cloneElement, useEffect, useMemo, useRef, useState } from 'react';
-import { Home, User, Briefcase, FolderGit2, Mail, FileText, Github, Linkedin } from 'lucide-react';
-import { contactData } from '../data';
+import { Home, Mail, FileText, Github, Linkedin } from 'lucide-react';
+import { navItems } from '../data';
+import { scrollToId } from '../lib/scrollToId';
 import './Dock.css';
+
+const MOBILE_DOCK_QUERY = '(max-width: 768px)';
+
+const DOCK_ICONS = {
+  home: Home,
+  mail: Mail,
+  file: FileText,
+  github: Github,
+  linkedin: Linkedin,
+};
+
+function useIsMobileDock() {
+  const [isMobile, setIsMobile] = useState(() =>
+    typeof window !== 'undefined' ? window.matchMedia(MOBILE_DOCK_QUERY).matches : false
+  );
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia(MOBILE_DOCK_QUERY);
+    const update = () => setIsMobile(mediaQuery.matches);
+    update();
+    mediaQuery.addEventListener('change', update);
+    return () => mediaQuery.removeEventListener('change', update);
+  }, []);
+
+  return isMobile;
+}
 
 function DockItem({ children, className = '', onClick, mouseX, spring, distance, magnification, baseItemSize }) {
   const ref = useRef(null);
@@ -86,80 +111,45 @@ export default function Dock({
   dockHeight = 256,
   baseItemSize = 50
 }) {
+  const isMobile = useIsMobileDock();
   const mouseX = useMotionValue(Infinity);
   const isHovered = useMotionValue(0);
 
+  const activeBaseItemSize = isMobile ? 40 : baseItemSize;
+  const activeMagnification = isMobile ? 52 : magnification;
+  const activePanelHeight = isMobile ? 56 : panelHeight;
+  const activeDockHeight = isMobile ? 120 : dockHeight;
+
   const maxHeight = useMemo(
-    () => Math.max(dockHeight, magnification + magnification / 2 + 4),
-    [magnification, dockHeight]
+    () => Math.max(activeDockHeight, activeMagnification + activeMagnification / 2 + 4),
+    [activeDockHeight, activeMagnification]
   );
-  const heightRow = useTransform(isHovered, [0, 1], [panelHeight, maxHeight]);
+  const heightRow = useTransform(isHovered, [0, 1], [activePanelHeight, maxHeight]);
   const height = useSpring(heightRow, spring);
 
-  // navigation items with icons and handlers
-  const items = [
-    {
-      icon: <Home size={18} />,
-      label: 'Home',
-      onClick: () => {
-        const element = document.getElementById('home');
-        element?.scrollIntoView({ behavior: 'smooth' });
-      }
-    },
-    {
-      icon: <User size={18} />,
-      label: 'About',
-      onClick: () => {
-        const element = document.getElementById('about');
-        element?.scrollIntoView({ behavior: 'smooth' });
-      }
-    },
-    {
-      icon: <Briefcase size={18} />,
-      label: 'Experience',
-      onClick: () => {
-        const element = document.getElementById('experience');
-        element?.scrollIntoView({ behavior: 'smooth' });
-      }
-    },
-    {
-      icon: <FolderGit2 size={18} />,
-      label: 'Projects',
-      onClick: () => {
-        const element = document.getElementById('projects');
-        element?.scrollIntoView({ behavior: 'smooth' });
-      }
-    },
-    {
-      icon: <Mail size={18} />,
-      label: 'Contact',
-      onClick: () => {
-        const element = document.getElementById('contact');
-        element?.scrollIntoView({ behavior: 'smooth' });
-      }
-    },
-    {
-      type: 'separator'
-    },
-    {
-      icon: <FileText size={18} />,
-      label: 'Resume',
-      onClick: () => window.open(`${import.meta.env.BASE_URL}assets/nav-bar-content/Lindsay_Cheng_Resume.pdf`, '_blank')
-    },
-    {
-      icon: <Github size={18} />,
-      label: 'GitHub',
-      onClick: () => window.open(contactData.social.github, '_blank')
-    },
-    {
-      icon: <Linkedin size={18} />,
-      label: 'LinkedIn',
-      onClick: () => window.open(contactData.social.linkedin, '_blank')
+  const items = navItems.map(item => {
+    if (item.type === 'separator') {
+      return { type: 'separator' };
     }
-  ];
+
+    const Icon = DOCK_ICONS[item.icon];
+    const onClick =
+      item.type === 'scroll'
+        ? () => scrollToId(item.targetId)
+        : () => window.open(item.href, '_blank');
+
+    return {
+      icon: <Icon size={18} />,
+      label: item.label,
+      onClick,
+    };
+  });
 
   return (
-    <motion.div style={{ height, scrollbarWidth: 'none' }} className="dock-outer">
+    <motion.div
+      style={isMobile ? undefined : { height, scrollbarWidth: 'none' }}
+      className={`dock-outer${isMobile ? ' dock-outer--mobile' : ''}`}
+    >
       <motion.div
         onMouseMove={({ pageX }) => {
           isHovered.set(1);
@@ -170,7 +160,7 @@ export default function Dock({
           mouseX.set(Infinity);
         }}
         className={`dock-panel ${className}`}
-        style={{ height: panelHeight }}
+        style={{ height: activePanelHeight }}
         role="toolbar"
         aria-label="Application dock"
       >
@@ -188,8 +178,8 @@ export default function Dock({
               mouseX={mouseX}
               spring={spring}
               distance={distance}
-              magnification={magnification}
-              baseItemSize={baseItemSize}
+              magnification={activeMagnification}
+              baseItemSize={activeBaseItemSize}
             >
               <DockIcon>{item.icon}</DockIcon>
               <DockLabel>{item.label}</DockLabel>
