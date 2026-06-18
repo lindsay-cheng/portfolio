@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      // send unknown paths like /portfolio/education back to the single-page app root
+      const base = '/portfolio/';
+      const redirect = base + (window.location.hash || '');
+      window.location.replace(redirect);
+    </script>
+  </head>
+  <body></body>
+</html>

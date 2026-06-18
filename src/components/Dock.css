@@ -1,15 +1,25 @@
 .dock-outer {
-  margin: 0 0.5rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
   max-width: 100%;
-  align-items: center;
+  align-items: flex-end;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 1000;
+  overflow: visible;
+}
+
+.dock-outer--mobile {
+  height: auto !important;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
 .dock-panel {
-  position: fixed;
-  bottom: 1.5rem;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  bottom: var(--dock-bottom-offset);
   display: flex;
   align-items: flex-end;
   width: fit-content;
@@ -19,7 +29,7 @@
   backdrop-filter: blur(10px);
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0 0.5rem 0.5rem;
-  z-index: 1000;
+  pointer-events: auto;
 }
 
 .dock-item {
@@ -43,7 +53,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #1a1a1a;
+  color: var(--color-text);
 }
 
 .dock-label {
@@ -58,7 +68,7 @@
   backdrop-filter: blur(10px);
   padding: 0.25rem 0.75rem;
   font-size: 0.75rem;
-  color: #1a1a1a;
+  color: var(--color-text);
   transform: translateX(-50%);
 }
 
@@ -70,10 +80,30 @@
   align-self: center;
 }
 
-/* hide dock on mobile devices */
-@media (max-width: 768px) {
-  .dock-outer,
+@media screen and (max-width: 768px) {
   .dock-panel {
-    display: none !important;
+    position: fixed;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+    gap: 0.45rem;
+    padding: 0 0.35rem 0.35rem;
+    max-width: calc(100vw - 1rem);
+  }
+
+  .dock-item {
+    flex: 0 0 auto;
+  }
+
+  .dock-separator {
+    height: 24px;
+    margin: 0 0.05rem;
+  }
+
+  .dock-label {
+    top: -2.25rem;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.55rem;
   }
 }
