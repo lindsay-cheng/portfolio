@@ -196,7 +196,7 @@ export const navItems = [
   { type: 'scroll', label: 'Home', icon: 'home', targetId: sectionIds.home },
   { type: 'scroll', label: 'Contact', icon: 'mail', targetId: sectionIds.contact },
   { type: 'separator' },
-  { type: 'external', label: 'Resume', icon: 'file', href: `${base}assets/nav-bar-content/Lindsay_Cheng_Resume.pdf` },
+  { type: 'external', label: 'Resume', icon: 'file', href: `${base}assets/nav-bar-content/big-fat-crying.GIF` },
   { type: 'external', label: 'GitHub', icon: 'github', href: contactData.social.github },
   { type: 'external', label: 'LinkedIn', icon: 'linkedin', href: contactData.social.linkedin },
 ];
