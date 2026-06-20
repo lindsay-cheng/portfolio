@@ -5,7 +5,7 @@
   overflow: hidden;
   display: grid;
   grid-template-columns: minmax(0, 56%) minmax(16rem, 1fr);
-  align-items: center;
+  align-items: stretch;
 }
 
 .projects-list .project-card:nth-child(even) {
@@ -22,9 +22,8 @@
 
 .project-card__media {
   width: 100%;
-  height: auto;
   min-height: 0;
-  align-self: center;
+  align-self: stretch;
   overflow: hidden;
   background: var(--color-surface);
   display: flex;
@@ -35,13 +34,14 @@
 .project-card__media img,
 .project-card__media video {
   width: 100%;
-  height: auto;
+  height: 100%;
   max-width: none;
   object-fit: contain;
   display: block;
 }
 
 .project-card__media--letterbox {
+  min-height: 100%;
   aspect-ratio: 16 / 9;
   background-image: var(--letterbox-bg);
   background-size: cover;
