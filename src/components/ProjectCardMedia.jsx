@@ -1,32 +1,29 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { resolveProjectMedia } from '../lib/resolveProjectMedia';
 
 function ProjectCardMedia({ project }) {
   const media = resolveProjectMedia(project);
-  const containerRef = useRef(null);
   const videoRef = useRef(null);
   const isVideo = media.kind === 'video';
-  const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
 
   useEffect(() => {
-    if (!isVideo || !containerRef.current) return;
+    if (!isVideo || !videoRef.current) return;
 
-    const container = containerRef.current;
+    const video = videoRef.current;
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setShouldLoadVideo(true);
-            videoRef.current?.play?.();
+            video.play?.();
           } else {
-            videoRef.current?.pause?.();
+            video.pause?.();
           }
         });
       },
-      { rootMargin: '200px', threshold: 0.25 }
+      { threshold: 0.5 }
     );
 
-    observer.observe(container);
+    observer.observe(video);
     return () => observer.disconnect();
   }, [isVideo]);
 
@@ -44,20 +41,20 @@ function ProjectCardMedia({ project }) {
       : undefined;
 
   return (
-    <div ref={containerRef} className={mediaClass} style={style}>
+    <div className={mediaClass} style={style}>
       {isVideo ? (
         <video
           ref={videoRef}
-          src={shouldLoadVideo ? media.src : undefined}
+          src={media.src}
           poster={media.poster}
           muted
           playsInline
           loop
-          preload="none"
+          preload="auto"
           aria-label={`${media.label} preview video`}
         />
       ) : (
-        <img src={media.src} alt={media.label} loading="lazy" decoding="async" />
+        <img src={media.src} alt={media.label} />
       )}
     </div>
   );

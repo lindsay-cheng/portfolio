@@ -27,7 +27,7 @@ function Hero() {
           </div>
         </div>
         <div className="hero-photo reveal-item" aria-label="Portrait placeholder">
-          <img src={photo.src} alt={photo.alt} fetchPriority="high" decoding="async" />
+          <img src={photo.src} alt={photo.alt} />
         </div>
       </div>
     </section>
