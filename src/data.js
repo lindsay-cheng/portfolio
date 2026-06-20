@@ -75,11 +75,11 @@ export const educationData = {
 export const skillsData = [
   {
     category: "Languages",
-    skills: ["Python", "C/C++", "Swift", "JavaScript", "TypeScript", "HTML", "Tailwind CSS", "MATLAB"]
+    skills: ["Python", "C/C++", "Swift", "TypeScript", "SQL", "Tailwind CSS", "MATLAB"]
   },
   {
     category: "Frameworks & Libraries",
-    skills: ["React", "Node.js", "Next.js", "Express", "Drizzle ORM", "FastAPI", "OpenCV"]
+    skills: ["React", "Node.js", "Next.js", "Express", "Drizzle ORM", "FastAPI", "OpenCV", "Ultralytics"]
   },
   {
     category: "Technologies",
@@ -87,7 +87,7 @@ export const skillsData = [
   },
   {
     category: "Developer Tools",
-    skills: ["Git", "GitHub", "Postman", "Turborepo", "Cloudflare R2", "Linux"]
+    skills: ["Git", "GitHub", "Postman", "Playwright", "Turborepo", "Cloudflare R2", "Linux"]
   }
 ];
 
@@ -131,6 +131,14 @@ export const experiencesData = [
 
 export const projectsData = [
   {
+    id: "gitagrip",
+    title: "GitAGrip",
+    description: "Lightweight Application Security Posture Management (ASPM) tool for GitHub repos. Orchestrates SAST, secrets detection, SCA/IaC/container scanning, and quality tools server-side. Aggregates findings into single score and dashboard. Made for open source maintainers and solo developers. (WIP)",
+    tags: ["TypeScript", "Next.js", "Express", "PostgreSQL", "Redis", "BullMQ", "Docker", "NGINX", "Linux", "Hetzner Cloud"],
+    image: `${base}assets/project-imgs/gitagrip-mockup.jpg`,
+    githubLink: "https://github.com/nicholasjano/gitagrip"
+  },
+  { 
     id: "clearmark",
     title: "ClearMark",
     description: "Full-stack iOS app for AI-powered grading and course management. Uses VisionKit for document scanning and carefully engineered LLM prompts for rubric-aligned evaluation, with strict JSON guardrails achieving a 98% parsing success rate. Built with MVVM architecture, a Node.js/Express backend on Render, Google OAuth 2.0, and Cloudflare R2 for role-based access control.",
@@ -145,7 +153,7 @@ export const projectsData = [
   {
     id: "villara",
     title: "Villara (Startup)",
-    description: "Connecting talents, freelancers, and trade skills in communities. Services include haircuts, nails, automotive repairs, and more in the coming future. (WIP) ",
+    description: "Connecting talents, freelancers, and trade skills in communities. Services include haircuts, nails, automotive repairs, and more in the coming future.",
     tags: ["React", "TypeScript", "Java", "Spring Boot", "PostgreSQL", "Redux", "Google OAuth", "Tailwind CSS", "AWS EC2", "AWS S3", "NGINX", "Linux", "Docker"],
     image: `${base}assets/project-imgs/villara-FWUEIDcn.png`,
   },
@@ -153,7 +161,7 @@ export const projectsData = [
     id: "water-bottle-defect",
     title: "Water Bottle Defect Detection System",
     description: "Automated quality control system for detecting water bottle defects using YOLO and OpenCV, with a Tkinter monitoring dashboard and SQLite defect logging. Collected and annotated 300+ images across 4 defect classes, training a YOLO11s model to 93.1% accuracy. Uses ByteTrack for per-bottle ID assignment and multi-object tracking.",
-    tags: ["Python", "YOLOv8", "OpenCV", "SQLite", "Tkinter"],
+    tags: ["Python", "Ultralytics", "OpenCV", "SQLite", "Tkinter"],
     media: {
       type: "video",
       src: `${base}assets/project-videos/defect-detection-demo.mp4`,
@@ -206,7 +214,7 @@ export const navItems = [
   { type: 'scroll', label: 'Home', icon: 'home', targetId: sectionIds.home },
   { type: 'scroll', label: 'Contact', icon: 'mail', targetId: sectionIds.contact },
   { type: 'separator' },
-  { type: 'external', label: 'Resume', icon: 'file', href: `${base}assets/nav-bar-content/big-fat-crying.GIF` },
+  { type: 'external', label: 'Resume', icon: 'file', href: `${base}assets/nav-bar-content/crying.GIF` },
   { type: 'external', label: 'GitHub', icon: 'github', href: contactData.social.github },
   { type: 'external', label: 'LinkedIn', icon: 'linkedin', href: contactData.social.linkedin },
 ];
