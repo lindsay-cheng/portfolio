@@ -55,7 +55,7 @@ export const heroData = {
     afterEducationLink: ". I like playing badminton, tennis, going to the gym, and playing piano. Currently based in Toronto.",
   },
   photo: {
-    src: `${base}assets/images-main/mountain-selfie-cropped.JPG`,
+    src: `${base}assets/images-main/mountain-me.webp`,
     alt: "Lindsay Cheng",
   },
 };
@@ -155,7 +155,7 @@ export const projectsData = [
     title: "Villara (Startup)",
     description: "Connecting talents, freelancers, and trade skills in communities. Services include haircuts, nails, automotive repairs, and more in the coming future.",
     tags: ["React", "TypeScript", "Java", "Spring Boot", "PostgreSQL", "Redux", "Google OAuth", "Tailwind CSS", "AWS EC2", "AWS S3", "NGINX", "Linux", "Docker"],
-    image: `${base}assets/project-imgs/villara-FWUEIDcn.png`,
+    image: `${base}assets/project-imgs/villara.webp`,
   },
   {
     id: "water-bottle-defect",

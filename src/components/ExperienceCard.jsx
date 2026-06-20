@@ -53,6 +53,8 @@ function ExperienceCard({ experience }) {
               <img
                 src={poster.src}
                 alt={poster.alt || 'Research poster'}
+                loading="lazy"
+                decoding="async"
               />
               {poster.caption && (
                 <figcaption className="experience-row-poster-caption">
