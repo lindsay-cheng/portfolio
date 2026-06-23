@@ -79,7 +79,7 @@ export const skillsData = [
   },
   {
     category: "Frameworks & Libraries",
-    skills: ["React", "Node.js", "Next.js", "Express", "Drizzle ORM", "FastAPI", "OpenCV", "Ultralytics"]
+    skills: ["React", "Node.js", "Next.js", "Express", "Drizzle ORM", "FastAPI", "OpenCV", "Ultralytics", "tRPC"]
   },
   {
     category: "Technologies",
@@ -87,7 +87,7 @@ export const skillsData = [
   },
   {
     category: "Developer Tools",
-    skills: ["Git", "GitHub", "Postman", "Playwright", "Turborepo", "Cloudflare R2", "Linux"]
+    skills: ["Git", "GitHub", "Postman", "Playwright", "Turborepo", "Cloudflare R2", "Linux", "Sentry", "Github Actions"]
   }
 ];
 
@@ -99,7 +99,7 @@ export const experiencesData = [
     period: "May 2026 - Aug 2026",
     location: "Toronto, ON",
     description: "Scaling core architectures and LMS.",
-    tags: ["PostgreSQL", "Redis", "Docker", "Playwright", "Sentry"],
+    tags: ["tRPC", "PostgreSQL", "Redis", "Docker", "Playwright", "Sentry", "Github Actions", "AWS ECS Fargate (ECR, ALB)"],
     image: `${base}assets/experience-imgs/yep-logo.jpg`
   },
   {
