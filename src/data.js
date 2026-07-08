@@ -83,11 +83,11 @@ export const skillsData = [
   },
   {
     category: "Technologies",
-    skills: ["PostgreSQL", "MongoDB", "SQLite", "Redis", "Docker", "BullMQ", "NGINX"]
+    skills: ["PostgreSQL", "MongoDB", "SQLite", "Redis", "Docker", "BullMQ", "NGINX", "Google Cloud Platform (GCP)"]
   },
   {
     category: "Developer Tools",
-    skills: ["Git", "GitHub", "Postman", "Playwright", "Turborepo", "Cloudflare R2", "Linux", "Sentry", "Github Actions"]
+    skills: ["Git", "GitHub", "Postman", "Playwright", "Turborepo", "Cloudflare R2", "Linux", "Sentry", "GitHub Actions"]
   }
 ];
 
@@ -99,7 +99,7 @@ export const experiencesData = [
     period: "May 2026 - Aug 2026",
     location: "Toronto, ON",
     description: "Scaling core architectures and LMS.",
-    tags: ["tRPC", "PostgreSQL", "Redis", "Docker", "Playwright", "Sentry", "Github Actions", "AWS ECS Fargate (ECR, ALB)"],
+    tags: ["TypeScript", "tRPC", "PostgreSQL", "Redis", "Docker", "Playwright", "Sentry", "CI/CD", "GCP"],
     image: `${base}assets/experience-imgs/yep-logo.jpg`
   },
   {
@@ -137,6 +137,14 @@ export const projectsData = [
     tags: ["TypeScript", "Next.js", "Express", "PostgreSQL", "Redis", "BullMQ", "Docker", "NGINX", "Linux", "Hetzner Cloud"],
     image: `${base}assets/project-imgs/gitagrip-mockup.jpg`,
     githubLink: "https://github.com/nicholasjano/gitagrip"
+  },
+  {
+    id: "dibs",
+    title: "Dibs",
+    description: "A serverless Python tool that runs on GitHub Actions, polls an internship listings feed every 15 minutes from Simplify, filters by a user-defined company watchlist, and emails newly posted matching roles via Gmail SMTP. More frequent and customizable than Simplify's SWEList.",
+    tags: ["Python", "GitHub Actions"],
+    image: `${base}assets/nav-bar-content/crying.GIF`,
+    githubLink: "https://github.com/lindsay-cheng/dibs"
   },
   { 
     id: "clearmark",
