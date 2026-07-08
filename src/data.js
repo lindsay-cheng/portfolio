@@ -143,7 +143,7 @@ export const projectsData = [
     title: "Dibs",
     description: "A serverless Python tool that runs on GitHub Actions, polls an internship listings feed every 15 minutes from Simplify, filters by a user-defined company watchlist, and emails newly posted matching roles via Gmail SMTP. More frequent and customizable than Simplify's SWEList.",
     tags: ["Python", "GitHub Actions"],
-    image: `${base}assets/nav-bar-content/crying.GIF`,
+    image: `${base}assets/project-imgs/dibs-ascii.png`,
     githubLink: "https://github.com/lindsay-cheng/dibs"
   },
   { 
