@@ -47,17 +47,36 @@ const base = import.meta.env.BASE_URL;
 
 export const heroData = {
   name: "Hi, I'm Lindsay",
-  thesis: "Computer Engineering @ UofT, passionate about software, AI, machine learning, and computer vision.",
+  thesis: "Computer Engineering @ UofT, passionate about software, AI, machine learning, and computer vision. Based in Toronto.",
   about: {
     heading: "About",
     beforeEducationLink: "My name is Lindsay Cheng, and I'm currently studying computer engineering at the ",
     educationLinkText: "University of Toronto",
-    afterEducationLink: ". I like playing badminton, tennis, going to the gym, and playing piano. Currently based in Toronto.",
+    afterEducationLinkBeforePiano: ". I like playing badminton, tennis, going to the gym, and playing ",
+    pianoLinkText: "piano",
   },
   photo: {
-    src: `${base}assets/images-main/mountain-me.webp`,
+    src: `${base}assets/images-main/mountain-2.webp`,
     alt: "Lindsay Cheng",
   },
+};
+
+export const musicData = {
+  blurb: "I love listening to classical music. Here are some of my favourite pieces to listen to and play:",
+  listening: [
+    { title: "Andante spianato and Grande polonaise brilliante, Op. 22", composer: "Chopin" },
+    { title: "24 Preludes, Op. 28", composer: "Chopin" },
+    { title: "Piano Sonata No. 2 in B\u266D minor, Op. 35", composer: "Chopin" },
+    { title: "Concerto for 4 Harpsichords in A minor, BWV 1065", composer: "Bach" },
+    { title: "Barcarolle in F\u266F major, Op. 60", composer: "Chopin" },
+    { title: "Piano Concerto No. 2 in B\u266D major, Op. 83", composer: "Brahms" },
+    { title: "Gaspard de la nuit (Ondine \u00B7 Le Gibet \u00B7 Scarbo)", composer: "Ravel" },
+    { title: "Piano Concerto No. 5 in E\u266D major, Op. 73", composer: "Beethoven" },
+  ],
+  practicing: [
+    { title: "Intermezzo in A major, Op. 118 No. 2", composer: "Brahms" },
+    { title: "Nocturne in C\u266F minor, Op. 27 No. 1", composer: "Chopin" },
+  ],
 };
 
 export const educationData = {
@@ -141,7 +160,7 @@ export const projectsData = [
   {
     id: "dibs",
     title: "Dibs",
-    description: "A serverless Python tool that runs on GitHub Actions, polls an internship listings feed every 15 minutes from Simplify, filters by a user-defined company watchlist, and emails newly posted matching roles via Gmail SMTP. More frequent and customizable than Simplify's SWEList.",
+    description: "A serverless Python tool that runs on GitHub Actions, polls an internship listings feed every 5 minutes from Simplify, filters by a user-defined company watchlist, and emails newly posted matching roles via Gmail SMTP. More frequent and customizable than Simplify's SWEList.",
     tags: ["Python", "GitHub Actions"],
     image: `${base}assets/project-imgs/dibs-ascii.png`,
     githubLink: "https://github.com/lindsay-cheng/dibs"
