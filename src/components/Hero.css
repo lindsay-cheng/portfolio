@@ -27,37 +27,26 @@
   color: var(--color-text);
 }
 
-.hero-thesis {
+.hero-intro {
   font-family: var(--font-ui);
   letter-spacing: 0.01em;
   max-width: 40rem;
-  color: var(--color-text);
-  font-size: clamp(1rem, 2vw, 1.12rem);
-  line-height: 1.45;
-}
-
-.hero-about-block {
-  max-width: 38rem;
-  margin-top: 1.35rem;
-}
-
-.hero-about-block h2 {
-  font-family: var(--font-display);
-  font-size: 1rem;
-  font-weight: 650;
-  color: var(--color-text);
-  letter-spacing: -0.01em;
-  margin-bottom: 0.25rem;
-}
-
-.hero-about-block p {
-  font-family: var(--font-ui);
-  font-size: 0.9rem;
-  line-height: 1.6;
+  margin-top: 0.65rem;
   color: var(--color-muted);
+  font-size: clamp(1rem, 2vw, 1.05rem);
+  line-height: 1.6;
 }
 
-.hero-about-link {
+.hero-contact {
+  font-family: var(--font-ui);
+  max-width: 40rem;
+  margin-top: 0.75rem;
+  color: var(--color-muted);
+  font-size: clamp(1rem, 2vw, 1.05rem);
+  line-height: 1.6;
+}
+
+.hero-email-link {
   font: inherit;
   color: inherit;
   background: none;
@@ -69,11 +58,11 @@
   text-underline-offset: 0.15em;
 }
 
-.hero-about-link:hover {
+.hero-email-link:hover {
   color: var(--color-text);
 }
 
-.hero-about-link:focus-visible {
+.hero-email-link:focus-visible {
   outline: 2px solid rgba(0, 113, 227, 0.45);
   outline-offset: 3px;
   border-radius: 2px;
@@ -127,11 +116,8 @@
     order: -1;
   }
 
-  .hero-thesis {
+  .hero-intro,
+  .hero-contact {
     font-size: 1rem;
-  }
-
-  .hero-about-block {
-    margin-top: 1rem;
   }
 }

@@ -70,6 +70,10 @@
   }
 }
 
+.page-reveal {
+  padding-bottom: var(--section-bottom-safe);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .inline-action-link {
     transition: none;

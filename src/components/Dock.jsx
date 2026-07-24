@@ -1,6 +1,6 @@
 import { motion, useMotionValue, useSpring, useTransform, AnimatePresence } from 'motion/react';
 import { Children, cloneElement, useEffect, useMemo, useRef, useState } from 'react';
-import { Home, Mail, FileText, Github, Linkedin } from 'lucide-react';
+import { Home, FileText, Github, Linkedin } from 'lucide-react';
 import { navItems } from '../data';
 import { scrollToId } from '../lib/scrollToId';
 import './Dock.css';
@@ -9,7 +9,6 @@ const MOBILE_DOCK_QUERY = '(max-width: 768px)';
 
 const DOCK_ICONS = {
   home: Home,
-  mail: Mail,
   file: FileText,
   github: Github,
   linkedin: Linkedin,

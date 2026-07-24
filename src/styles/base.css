@@ -8,7 +8,7 @@
   --radius-media: 8px;
   --radius-pill: 999px;
   --section-gap: 1.35rem;
-  --section-bottom-safe: 7rem;
+  --section-bottom-safe: calc(var(--dock-bottom-offset) + var(--dock-panel-height) + 2.5rem);
   --color-text: #1d1d1f;
   --color-muted: #6e6e73;
   --color-border: #e5e5e5;
@@ -61,6 +61,8 @@ html::-webkit-scrollbar-thumb {
   :root {
     --page-padding: 1.5rem;
     --section-gap: 1.15rem;
+    --dock-panel-height: 56px;
+    --section-bottom-safe: calc(var(--dock-bottom-offset) + var(--dock-panel-height) + 2rem);
   }
 }
 

@@ -47,13 +47,8 @@ const base = import.meta.env.BASE_URL;
 
 export const heroData = {
   name: "Hi, I'm Lindsay",
-  thesis: "Computer Engineering @ UofT, passionate about software, AI, machine learning, and computer vision. Based in Toronto.",
-  about: {
-    heading: "About",
-    beforeEducationLink: "My name is Lindsay Cheng, and I'm currently studying computer engineering at the ",
-    educationLinkText: "University of Toronto",
-    afterEducationLink: ". I like playing badminton, tennis, going to the gym, and playing piano.",
-  },
+  intro: "Computer engineering student at UofT, interested in software, AI, and computer vision. Outside of code I play badminton, tennis, and piano.",
+  contactPrefix: "Contact me at ",
   photo: {
     src: `${base}assets/images-main/mountain-2.webp`,
     alt: "Lindsay Cheng",
@@ -200,8 +195,10 @@ export const projectsData = [
 ];
 
 export const contactData = {
-  email: "lindsaycheng2@gmail.com",
-  phone: "+1 (647) 898 6526",
+  email: {
+    local: "lindsaycheng2",
+    domain: "gmail.com",
+  },
   social: {
     github: "https://github.com/lindsay-cheng",
     linkedin: "https://www.linkedin.com/in/lindsay-cheng-b02175309/",
@@ -210,17 +207,14 @@ export const contactData = {
 
 export const sectionIds = {
   home: 'home',
-  about: 'about',
   experience: 'experience',
   education: 'education',
   skills: 'skills',
   projects: 'projects',
-  contact: 'contact',
 };
 
 export const navItems = [
   { type: 'scroll', label: 'Home', icon: 'home', targetId: sectionIds.home },
-  { type: 'scroll', label: 'Contact', icon: 'mail', targetId: sectionIds.contact },
   { type: 'separator' },
   { type: 'external', label: 'Resume', icon: 'file', href: `${base}assets/nav-bar-content/crying.GIF` },
   { type: 'external', label: 'GitHub', icon: 'github', href: contactData.social.github },
