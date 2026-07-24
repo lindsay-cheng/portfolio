@@ -48,7 +48,7 @@ const base = import.meta.env.BASE_URL;
 export const heroData = {
   greeting: "Hi, I'm",
   name: "Lindsay Cheng",
-  intro: "Computer engineering student at UofT, interested in software, AI, and computer vision. Outside of code I play badminton, tennis, and piano.",
+  intro: "Computer engineering student at UofT, interested in software, AI, and computer vision. Outside of software, I love playing badminton, listening to classical music, and playing piano.",
   contactPrefix: "Contact me at ",
   photo: {
     src: `${base}assets/images-main/mountain-2.webp`,
