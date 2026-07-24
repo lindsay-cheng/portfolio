@@ -17,7 +17,14 @@ function ExperienceCard({ experience }) {
         aria-controls={`experience-panel-${experience.id}`}
       >
         <div className="experience-row-logo">
-          <img src={experience.image} alt="" />
+          <img
+            src={experience.image}
+            alt=""
+            width={experience.imgWidth}
+            height={experience.imgHeight}
+            loading="lazy"
+            decoding="async"
+          />
         </div>
         <div className="experience-row-main">
           <span className="experience-row-company">{experience.company}</span>
@@ -53,6 +60,10 @@ function ExperienceCard({ experience }) {
               <img
                 src={poster.src}
                 alt={poster.alt || 'Research poster'}
+                width={poster.width}
+                height={poster.height}
+                loading="lazy"
+                decoding="async"
               />
               {poster.caption && (
                 <figcaption className="experience-row-poster-caption">

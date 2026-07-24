@@ -1,19 +1,128 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <link rel="icon" href="/assets/icons/android-chrome-192x192.png" sizes="192x192">
-    <link rel="icon" href="/assets/icons/android-chrome-512x512.png" sizes="512x512">
-    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
-    <link rel="icon" href="/assets/icons/favicon-16x16.png" sizes="16x16">
-    <link rel="icon" href="/assets/icons/favicon-32x32.png" sizes="32x32">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <title>Lindsay Cheng - Portfolio</title>
+
+    <!-- Primary SEO -->
+    <title>Lindsay Cheng — Computer Engineering Student &amp; Software Developer</title>
+    <meta
+      name="description"
+      content="Lindsay Cheng is a Computer Engineering student at the University of Toronto focused on software, AI, and computer vision. View projects, experience, and skills."
+    />
+    <meta name="author" content="Lindsay Cheng" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href="https://lindsaycheng.net/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Lindsay Cheng" />
+    <meta property="og:url" content="https://lindsaycheng.net/" />
+    <meta property="og:title" content="Lindsay Cheng — Computer Engineering Student &amp; Software Developer" />
+    <meta property="og:description" content="Computer Engineering student at the University of Toronto focused on software, AI, and computer vision. View projects, experience, and skills." />
+    <meta property="og:image" content="https://lindsaycheng.net/assets/images-main/mountain-2.webp" />
+    <meta property="og:image:width" content="1536" />
+    <meta property="og:image:height" content="2048" />
+    <meta property="og:image:alt" content="Lindsay Cheng" />
+    <meta property="og:locale" content="en_CA" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Lindsay Cheng — Computer Engineering Student &amp; Software Developer" />
+    <meta name="twitter:description" content="Computer Engineering student at the University of Toronto focused on software, AI, and computer vision." />
+    <meta name="twitter:image" content="https://lindsaycheng.net/assets/images-main/mountain-2.webp" />
+    <meta name="twitter:image:alt" content="Lindsay Cheng" />
+
+    <!-- Theme + icons -->
+    <meta name="theme-color" content="#0a0a0a" />
+    <link rel="icon" href="/assets/icons/android-chrome-192x192.png" sizes="192x192" />
+    <link rel="icon" href="/assets/icons/android-chrome-512x512.png" sizes="512x512" />
+    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" />
+    <link rel="icon" href="/assets/icons/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" href="/assets/icons/favicon-32x32.png" sizes="32x32" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Performance: preload hero image (LCP) -->
+    <link rel="preload" as="image" href="/assets/images-main/mountain-2.webp" fetchpriority="high" />
+
+    <!--
+      Google Search Console verification:
+      After you add the property in Search Console, copy the verification code
+      and paste it below, then deploy. (You can also verify via DNS TXT record.)
+    -->
+    <!-- <meta name="google-site-verification" content="PASTE_VERIFICATION_CODE_HERE" /> -->
+
+    <!-- Structured data: Person -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Lindsay Cheng",
+        "url": "https://lindsaycheng.net/",
+        "image": "https://lindsaycheng.net/assets/images-main/mountain-2.webp",
+        "jobTitle": "Software Engineer",
+        "description": "Computer Engineering student at the University of Toronto focused on software, AI, and computer vision.",
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Toronto",
+          "sameAs": "https://www.utoronto.ca/"
+        },
+        "knowsAbout": [
+          "Software Engineering",
+          "Artificial Intelligence",
+          "Computer Vision",
+          "Python",
+          "TypeScript",
+          "React",
+          "Node.js",
+          "PostgreSQL",
+          "Swift",
+          "C"
+        ],
+        "sameAs": [
+          "https://github.com/lindsay-cheng",
+          "https://www.linkedin.com/in/lindsay-cheng-b02175309/"
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
+
+    <!--
+      Static fallback for crawlers and no-JS visitors.
+      React hydrates #root and replaces this content for JS users.
+    -->
+    <noscript>
+      <h1>Lindsay Cheng</h1>
+      <p>
+        Computer Engineering student at the University of Toronto, interested in
+        software, AI, and computer vision.
+      </p>
+      <h2>Experience</h2>
+      <ul>
+        <li>Software Engineer — YEP Education (May 2026 – Aug 2026)</li>
+        <li>Software Developer, ADCS — University of Toronto Aerospace Team (Sep 2025 – Present)</li>
+        <li>Materials Science Engineering Research Intern — Green Technologies Lab, UofT (May 2025 – Aug 2025)</li>
+      </ul>
+      <h2>Education</h2>
+      <p>University of Toronto St. George — BASc Computer Engineering + PEY Co-op (Expected April 2030)</p>
+      <h2>Projects</h2>
+      <ul>
+        <li>GitAGrip — Application Security Posture Management tool for GitHub repos</li>
+        <li>ClearMark — iOS app for AI-powered grading and course management</li>
+        <li>Water Bottle Defect Detection — YOLO-based automated quality control</li>
+        <li>Send — Social bouldering iOS app with YOLO hold detection and pathfinding</li>
+        <li>Dibs — Serverless Python internship-listings notifier</li>
+        <li>Villara — Marketplace connecting freelancers and trade skills</li>
+        <li>Reversi Game Bot — Minimax with alpha-beta pruning in C</li>
+      </ul>
+      <p>
+        <a href="https://github.com/lindsay-cheng">GitHub</a> ·
+        <a href="https://www.linkedin.com/in/lindsay-cheng-b02175309/">LinkedIn</a>
+      </p>
+    </noscript>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
-
-<!-- very cool -->

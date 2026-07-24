@@ -19,13 +19,15 @@
 
 .hero h1 {
   font-family: var(--font-display);
-  font-size: clamp(3rem, 6vw, 4.75rem);
-  font-weight: 700;
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  font-weight: 600;
   letter-spacing: -0.03em;
   line-height: 1.05;
   margin-bottom: 0.45rem;
   color: var(--color-text);
 }
+
+
 
 .hero-intro {
   font-family: var(--font-ui);
@@ -134,7 +136,7 @@
 
 @media screen and (max-width: 576px) {
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
 
   .hero-content {

@@ -4,7 +4,7 @@ import { contactData, heroData, sectionIds } from '../data';
 import './Hero.css';
 
 function Hero() {
-  const { name, intro, contactPrefix, photo } = heroData;
+  const { greeting, name, intro, contactPrefix, photo } = heroData;
   const { local, domain } = contactData.email;
   const email = `${local}@${domain}`;
   const displayEmail = `${local} [at] ${domain.replace('.', ' [dot] ')}`;
@@ -24,7 +24,9 @@ function Hero() {
     <section className="hero" id={sectionIds.home}>
       <div className="hero-content">
         <div className="hero-copy reveal-item">
-          <h1>{name}</h1>
+          <h1>
+            {greeting} {name}
+          </h1>
           <p className="hero-intro">{intro}</p>
           <p className="hero-contact">
             {contactPrefix}
@@ -57,7 +59,14 @@ function Hero() {
           </p>
         </div>
         <div className="hero-photo reveal-item" aria-label="Portrait placeholder">
-          <img src={photo.src} alt={photo.alt} />
+          <img
+            src={photo.src}
+            alt={photo.alt}
+            width={photo.width}
+            height={photo.height}
+            fetchpriority="high"
+            decoding="async"
+          />
         </div>
       </div>
     </section>

@@ -10,7 +10,14 @@ function Education() {
       <SectionHeader compact>Education</SectionHeader>
       <div className="education-container reveal-item">
         <div className="education-thumb">
-          <img src={image.src} alt={image.alt} />
+          <img
+            src={image.src}
+            alt={image.alt}
+            width={image.width}
+            height={image.height}
+            loading="lazy"
+            decoding="async"
+          />
         </div>
         <div className="education-content">
           <div className="education-main">

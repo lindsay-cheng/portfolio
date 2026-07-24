@@ -1,4 +1,4 @@
-# My portfolio @ https://lindsay-cheng.github.io/portfolio/
+# My portfolio @ https://lindsaycheng.net
 
 ### Install Dependencies
 

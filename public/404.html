@@ -2,10 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <title>Lindsay Cheng</title>
     <script>
-      // send unknown paths like /portfolio/education back to the single-page app root
-      const base = '/portfolio/';
-      const redirect = base + (window.location.hash || '');
+      // GitHub Pages SPA fallback: send unknown paths back to the app root.
+      // Preserves any in-page hash so anchor links keep working.
+      var redirect = '/' + (window.location.hash || '');
       window.location.replace(redirect);
     </script>
   </head>

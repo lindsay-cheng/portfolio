@@ -54,7 +54,14 @@ function ProjectCardMedia({ project }) {
           aria-label={`${media.label} preview video`}
         />
       ) : (
-        <img src={media.src} alt={media.label} />
+        <img
+          src={media.src}
+          alt={media.label}
+          width={project.imgWidth}
+          height={project.imgHeight}
+          loading="lazy"
+          decoding="async"
+        />
       )}
     </div>
   );
