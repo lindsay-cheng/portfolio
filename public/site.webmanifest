@@ -1,5 +1,5 @@
 {
-  "name": "Lindsay Cheng — Portfolio",
+  "name": "Lindsay Cheng",
   "short_name": "Lindsay Cheng",
   "description": "Computer Engineering student at the University of Toronto focused on software, AI, and computer vision.",
   "start_url": "/",
@@ -18,7 +18,7 @@
       "type": "image/png"
     },
     {
-      "src": "/assets/icons/apple-touch-icon.png",
+      "src": "/apple-touch-icon.png",
       "sizes": "180x180",
       "type": "image/png"
     },
