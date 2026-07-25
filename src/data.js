@@ -47,7 +47,7 @@ const base = import.meta.env.BASE_URL;
 
 export const heroData = {
   greeting: "Hi, I'm",
-  name: "Lindsay Cheng",
+  name: "Lindsay!",
   intro: "Computer engineering student at UofT, interested in software, AI, and computer vision. Outside of software, I love playing badminton, listening to classical music, and playing piano.",
   contactPrefix: "Contact me at ",
   photo: {
@@ -149,6 +149,17 @@ export const projectsData = [
     githubLink: "https://github.com/nicholasjano/gitagrip"
   },
   {
+    id: "water-bottle-defect",
+    title: "Water Bottle Defect Detection Pipeline",
+    description: "Real-time vision pipeline for automated quality inspection and object tracking. Benchmarked and optimized YOLOv11 models across PyTorch, ONNX, and CoreML runtimes for execution on the Apple Neural Engine. Built temporal label stabilizer adapted from NVIDIA DeepStream architecture on top of ByteTrack.",
+    tags: ["Python", "PyTorch", "CoreML", "ONNX", "YOLOv11", "ByteTrack", "OpenCV", "SQLite"],
+    media: {
+      type: "video",
+      src: `${base}assets/project-videos/defect-detection-demo.mp4`,
+    },
+    githubLink: "https://github.com/lindsay-cheng/defect-detection"
+  },
+  {
     id: "dibs",
     title: "Dibs",
     description: "A serverless Python tool that runs on GitHub Actions, polls an internship listings feed every 5 minutes from Simplify, filters by a user-defined company watchlist, and emails newly posted matching roles via Gmail SMTP. More frequent and customizable than Simplify's SWEList.",
@@ -178,17 +189,6 @@ export const projectsData = [
     image: `${base}assets/project-imgs/villara.webp`,
     imgWidth: 4500,
     imgHeight: 3000,
-  },
-  {
-    id: "water-bottle-defect",
-    title: "Water Bottle Defect Detection System",
-    description: "Automated quality control system for detecting water bottle defects using YOLO and OpenCV, with a Tkinter monitoring dashboard and SQLite defect logging. Collected and annotated 300+ images across 4 defect classes, training a YOLO11s model to 93.1% accuracy. Uses ByteTrack for per-bottle ID assignment and multi-object tracking.",
-    tags: ["Python", "Ultralytics", "OpenCV", "SQLite", "Tkinter"],
-    media: {
-      type: "video",
-      src: `${base}assets/project-videos/defect-detection-demo.mp4`,
-    },
-    githubLink: "https://github.com/lindsay-cheng/defect-detection"
   },
   {
     id: "send",
