@@ -151,7 +151,7 @@ export const projectsData = [
   {
     id: "water-bottle-defect",
     title: "Water Bottle Defect Detection Pipeline",
-    description: "Real-time vision pipeline for automated quality inspection and object tracking. Benchmarked and optimized YOLOv11 models across PyTorch, ONNX, and CoreML runtimes for execution on the Apple Neural Engine. Built temporal label stabilizer adapted from NVIDIA DeepStream architecture on top of ByteTrack.",
+    description: "Real-time defect detection and tracking pipeline optimized across PyTorch, ONNX, and CoreML for the Apple Neural Engine. Temporal label stabilizer adapted from NVIDIA DeepStream architecture atop ByteTrack, with split-conformal logging guard for uncertainty-aware decisions.",
     tags: ["Python", "PyTorch", "CoreML", "ONNX", "YOLOv11", "ByteTrack", "OpenCV", "SQLite"],
     media: {
       type: "video",
