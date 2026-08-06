@@ -72,24 +72,6 @@ export const educationData = {
   },
 };
 
-export const skillsData = [
-  {
-    category: "Languages",
-    skills: ["Python", "C/C++", "Swift", "TypeScript", "SQL", "Tailwind CSS", "MATLAB"]
-  },
-  {
-    category: "Frameworks & Libraries",
-    skills: ["React", "Node.js", "Next.js", "Express", "Drizzle ORM", "FastAPI", "OpenCV", "Ultralytics", "tRPC"]
-  },
-  {
-    category: "Technologies",
-    skills: ["PostgreSQL", "MongoDB", "SQLite", "Redis", "Docker", "BullMQ", "NGINX", "Google Cloud Platform (GCP)"]
-  },
-  {
-    category: "Developer Tools",
-    skills: ["Git", "GitHub", "Postman", "Playwright", "Turborepo", "Cloudflare R2", "Linux", "Sentry", "GitHub Actions"]
-  }
-];
 
 export const experiencesData = [
   {
@@ -104,18 +86,7 @@ export const experiencesData = [
     imgWidth: 607,
     imgHeight: 606
   },
-  {
-    id: "utat-adcs",
-    title: "Software Developer, Attitude Determination & Control Systems (ADCS)",
-    company: "University of Toronto Aerospace Team (UTAT) - Space Systems",
-    period: "Sep 2025 - Present",
-    location: "Toronto, ON",
-    description: "Designed Python control system for a 3-axis Helmholtz cage used in satellite hardware-in-the-loop testing with PID controller.",
-    tags: ["Python", "Linux", "Control Systems", "PID", "HWIL"],
-    image: `${base}assets/experience-imgs/cubesat.avif`,
-    imgWidth: 862,
-    imgHeight: 485
-  },
+
   {
     id: "materials-research",
     title: "Materials Science Engineering Research Intern",
@@ -230,7 +201,7 @@ export const sectionIds = {
   home: 'home',
   experience: 'experience',
   education: 'education',
-  skills: 'skills',
+
   projects: 'projects',
 };
 

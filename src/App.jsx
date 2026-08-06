@@ -3,7 +3,7 @@ import Dock from './components/Dock';
 import GradualBlur from './components/GradualBlur';
 import Hero from './components/Hero';
 import Education from './components/Education';
-import Skills from './components/Skills';
+
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import './App.css';
@@ -20,7 +20,7 @@ function App() {
       <Hero />
       <Experience />
       <Education />
-      <Skills />
+
       <Projects />
       <GradualBlur
         className="page-bottom-blur"
