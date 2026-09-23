@@ -43,6 +43,7 @@ const base = import.meta.env.BASE_URL;
  * @property {string} [image]
  * @property {ProjectMedia} [media]
  * @property {string} [githubLink]
+ * @property {string} [linkLabel]
  */
 
 export const heroData = {
@@ -110,14 +111,14 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    id: "gitagrip",
-    title: "GitAGrip",
-    description: "Lightweight Application Security Posture Management (ASPM) tool for GitHub repos. Orchestrates SAST, secrets detection, SCA/IaC/container scanning, and quality tools server-side. Aggregates findings into single score and dashboard. Made for open source maintainers and solo developers. (WIP)",
-    tags: ["TypeScript", "Next.js", "Express", "PostgreSQL", "Redis", "BullMQ", "Docker", "NGINX", "Linux", "Hetzner Cloud"],
-    image: `${base}assets/project-imgs/gitagrip-mockup.jpg`,
-    imgWidth: 1440,
-    imgHeight: 924,
-    githubLink: "https://github.com/nicholasjano/gitagrip"
+    id: "ferry",
+    title: "Ferry",
+    description: "Ferry moves your Claude Code session from one computer to another. It preserves the exact agent state: thinking blocks, tool calls, attachments, and subagents, things that /compact erases. 1st place at the 8090 x Highline Beta Hackathon.",
+    tags: ["Go", "Claude Code", "Homebrew"],
+    image: `${base}assets/project-imgs/ferry.png`,
+    imgWidth: 1024,
+    imgHeight: 1024,
+    githubLink: "https://github.com/lindsay-cheng/ferry"
   },
   {
     id: "water-bottle-defect",
@@ -131,16 +132,6 @@ export const projectsData = [
     githubLink: "https://github.com/lindsay-cheng/defect-detection"
   },
   {
-    id: "dibs",
-    title: "Dibs",
-    description: "A serverless Python tool that runs on GitHub Actions, polls an internship listings feed every 5 minutes from Simplify, filters by a user-defined company watchlist, and emails newly posted matching roles via Gmail SMTP. More frequent and customizable than Simplify's SWEList.",
-    tags: ["Python", "GitHub Actions"],
-    image: `${base}assets/project-imgs/dibs-ascii.png`,
-    imgWidth: 1028,
-    imgHeight: 560,
-    githubLink: "https://github.com/lindsay-cheng/dibs"
-  },
-  { 
     id: "clearmark",
     title: "ClearMark",
     description: "Full-stack iOS app for AI-powered grading and course management. Uses VisionKit for document scanning and carefully engineered LLM prompts for rubric-aligned evaluation, with strict JSON guardrails achieving a 98% parsing success rate. Built with MVVM architecture, a Node.js/Express backend on Render, Google OAuth 2.0, and Cloudflare R2 for role-based access control.",
@@ -151,6 +142,37 @@ export const projectsData = [
       presentation: "cover",
     },
     githubLink: "https://github.com/ClearMarkApp"
+  },
+  {
+    id: "dibs",
+    title: "Dibs",
+    description: "A serverless Python tool that runs on GitHub Actions, polls an internship listings feed every 5 minutes from Simplify, filters by a user-defined company watchlist, and emails newly posted matching roles via Gmail SMTP. More frequent and customizable than Simplify's SWEList.",
+    tags: ["Python", "GitHub Actions"],
+    image: `${base}assets/project-imgs/dibs-ascii.png`,
+    imgWidth: 1028,
+    imgHeight: 560,
+    githubLink: "https://github.com/lindsay-cheng/dibs"
+  },
+  {
+    id: "gitagrip",
+    title: "GitAGrip",
+    description: "Lightweight Application Security Posture Management (ASPM) tool for GitHub repos. Orchestrates SAST, secrets detection, SCA/IaC/container scanning, and quality tools server-side. Aggregates findings into single score and dashboard. Made for open source maintainers and solo developers. (WIP)",
+    tags: ["TypeScript", "Next.js", "Express", "PostgreSQL", "Redis", "BullMQ", "Docker", "NGINX", "Linux", "Hetzner Cloud"],
+    image: `${base}assets/project-imgs/gitagrip-mockup.jpg`,
+    imgWidth: 1440,
+    imgHeight: 924,
+    githubLink: "https://github.com/nicholasjano/gitagrip"
+  },
+  {
+    id: "spell-it",
+    title: "Spell It!",
+    description: "Competitive multiplayer word game on Roblox. Players find high-scoring words on a shared board, use power-ups to swing matches, and unlock cosmetics while ranking up. Play solo, head-to-head, or with friends. Includes a board-search hint algorithm (prefix tree and recursive backtracking) for the highest-scoring play with multipliers and swaps.",
+    tags: ["Roblox Studio", "Luau"],
+    image: `${base}assets/project-imgs/spell-it.png`,
+    imgWidth: 768,
+    imgHeight: 432,
+    githubLink: "https://www.roblox.com/games/137213591508119/Spell-It",
+    linkLabel: "Play on Roblox →"
   },
   {
     id: "villara",

@@ -23,7 +23,7 @@ function ProjectCard({ project }) {
               rel="noopener noreferrer"
               className="inline-action-link"
             >
-              View on GitHub →
+              {project.linkLabel || "View on GitHub →"}
             </a>
           </div>
         )}
