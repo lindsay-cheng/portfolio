@@ -113,11 +113,11 @@ export const projectsData = [
   {
     id: "ferry",
     title: "Ferry",
-    description: "Ferry moves your Claude Code session from one computer to another. It preserves the exact agent state: thinking blocks, tool calls, attachments, and subagents, things that /compact erases. 1st place at the 8090 x Highline Beta Hackathon.",
+    description: "CLI that moves a Claude Code session from one computer to another. It preserves the exact agent state: thinking blocks, tool calls, attachments, and subagents, things that /compact erases. 1st place at the 8090 x Highline Beta Hackathon.",
     tags: ["Go", "Claude Code", "Homebrew"],
-    image: `${base}assets/project-imgs/ferry.png`,
-    imgWidth: 1024,
-    imgHeight: 1024,
+    image: `${base}assets/project-imgs/ferry.webp`,
+    imgWidth: 1440,
+    imgHeight: 900,
     githubLink: "https://github.com/lindsay-cheng/ferry"
   },
   {
@@ -168,7 +168,7 @@ export const projectsData = [
     title: "Spell It!",
     description: "Competitive multiplayer word game on Roblox. Players find high-scoring words on a shared board, use power-ups to swing matches, and unlock cosmetics while ranking up. Play solo, head-to-head, or with friends. Includes a board-search hint algorithm (prefix tree and recursive backtracking) for the highest-scoring play with multipliers and swaps.",
     tags: ["Roblox Studio", "Luau"],
-    image: `${base}assets/project-imgs/spell-it.png`,
+    image: `${base}assets/project-imgs/spell-it.webp`,
     imgWidth: 768,
     imgHeight: 432,
     githubLink: "https://www.roblox.com/games/137213591508119/Spell-It",
