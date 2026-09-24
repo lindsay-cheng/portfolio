@@ -82,7 +82,7 @@ export const experiencesData = [
     period: "May 2026 - Aug 2026",
     location: "Toronto, ON",
     description: "Scaling core architectures and LMS.",
-    tags: ["TypeScript", "tRPC", "PostgreSQL", "Redis", "Docker", "Playwright", "Sentry", "CI/CD", "GCP"],
+    tags: ["GCP", "TypeScript", "tRPC", "PostgreSQL", "Redis", "Docker", "Playwright", "Sentry", "CI/CD"],
     image: `${base}assets/experience-imgs/yep-logo.jpg`,
     imgWidth: 607,
     imgHeight: 606
@@ -114,10 +114,10 @@ export const projectsData = [
     id: "ferry",
     title: "Ferry",
     description: "CLI that moves a Claude Code session from one computer to another. It preserves the exact agent state: thinking blocks, tool calls, attachments, and subagents, things that /compact erases. 1st place at the 8090 x Highline Beta Hackathon.",
-    tags: ["Go", "Claude Code", "Homebrew"],
+    tags: ["Go", "Homebrew"],
     image: `${base}assets/project-imgs/ferry.webp`,
-    imgWidth: 1440,
-    imgHeight: 900,
+    imgWidth: 1280,
+    imgHeight: 720,
     githubLink: "https://github.com/lindsay-cheng/ferry"
   },
   {
