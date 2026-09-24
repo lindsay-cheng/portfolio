@@ -83,7 +83,7 @@ export const experiencesData = [
     location: "Toronto, ON",
     description: "Scaling core architectures and LMS.",
     tags: ["GCP", "TypeScript", "tRPC", "PostgreSQL", "Redis", "Docker", "Playwright", "Sentry", "CI/CD"],
-    image: `${base}assets/experience-imgs/yep-logo.jpg`,
+    image: `${base}assets/experience-imgs/yep-logo.webp`,
     imgWidth: 607,
     imgHeight: 606
   },
@@ -96,11 +96,11 @@ export const experiencesData = [
     location: "Toronto, ON",
     description: "Researched ways to prevent EV batteries from blowing up using doped biochar composites made at 200°C lower processing temperatures than standard methods. Automated spectral analysis with Python, processing 100+ samples and cutting manual analysis time by 80%.",
     tags: ["Materials Science", "Research", "Python", "Fityk", "Data Analysis", "Raman Spectroscopy", "Analytical Lab Techniques"],
-    image: `${base}assets/experience-imgs/XRD-Bruker.png`,
+    image: `${base}assets/experience-imgs/XRD-Bruker.webp`,
     imgWidth: 750,
     imgHeight: 500,
     poster: {
-      src: `${base}assets/experience-imgs/green-tech-poster.png`,
+      src: `${base}assets/experience-imgs/green-tech-poster.webp`,
       alt: "Enhanced Thermal Conductivity in Wood Biochar Phase Change Material Dopants via Calcium-Catalyzed Graphitization (poster)",
       caption: "Research poster presented at UnERD Summer 2025 (First Year Summer Research Fellowship)",
       width: 2304,
@@ -148,7 +148,7 @@ export const projectsData = [
     title: "Dibs",
     description: "A serverless Python tool that runs on GitHub Actions, polls an internship listings feed every 5 minutes from Simplify, filters by a user-defined company watchlist, and emails newly posted matching roles via Gmail SMTP. More frequent and customizable than Simplify's SWEList.",
     tags: ["Python", "GitHub Actions"],
-    image: `${base}assets/project-imgs/dibs-ascii.png`,
+    image: `${base}assets/project-imgs/dibs-ascii.webp`,
     imgWidth: 1028,
     imgHeight: 560,
     githubLink: "https://github.com/lindsay-cheng/dibs"
@@ -158,7 +158,7 @@ export const projectsData = [
     title: "GitAGrip",
     description: "Lightweight Application Security Posture Management (ASPM) tool for GitHub repos. Orchestrates SAST, secrets detection, SCA/IaC/container scanning, and quality tools server-side. Aggregates findings into single score and dashboard. Made for open source maintainers and solo developers. (WIP)",
     tags: ["TypeScript", "Next.js", "Express", "PostgreSQL", "Redis", "BullMQ", "Docker", "NGINX", "Linux", "Hetzner Cloud"],
-    image: `${base}assets/project-imgs/gitagrip-mockup.jpg`,
+    image: `${base}assets/project-imgs/gitagrip-mockup.webp`,
     imgWidth: 1440,
     imgHeight: 924,
     githubLink: "https://github.com/nicholasjano/gitagrip"
@@ -192,7 +192,7 @@ export const projectsData = [
       type: "video",
       src: `${base}assets/project-videos/send-demo.mp4`,
       presentation: "letterbox",
-      backgroundSrc: `${base}assets/project-imgs/tahoe-bg.jpg`,
+      backgroundSrc: `${base}assets/project-imgs/tahoe-bg.webp`,
     },
     githubLink: "https://github.com/raiyan37/Send."
   },
@@ -201,7 +201,7 @@ export const projectsData = [
     title: "Reversi Game Bot",
     description: "A terminal-based implementation of Reversi/Othello with a bot opponent that runs on a minimax engine with alpha-beta pruning in C.",
     tags: ["C"],
-    image: `${base}assets/project-imgs/othello.jpg`,
+    image: `${base}assets/project-imgs/othello.webp`,
     imgWidth: 2246,
     imgHeight: 1134,
     githubLink: "https://github.com/lindsay-cheng/game-bot"
